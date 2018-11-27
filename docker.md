@@ -14,7 +14,8 @@ docker pull <image>
 docker run -itd <image>
 docker run -itd -v <local>:<container> <image>
 docker run -p 127.0.0.1:9200:9200 <image> <cmd>
-docker —name test123 <image>
+docker run —name test123 <image>
+docker run —it --rm <image> #运行后删除
 ```
 
 * 删除镜像：
