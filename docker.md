@@ -97,7 +97,7 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 docker login 确保登陆成功，如果是自己的私有仓库，可以：docker login docker.yousite.com
 
 docker
-docker tag <image> docker.baimaohui.net/<project>/<镜像名称>:lastest
+docker tag <image> <project>/<image>:lastest
 ```
 
 # 常见问题
