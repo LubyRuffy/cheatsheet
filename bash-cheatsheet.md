@@ -218,6 +218,9 @@ $1	第一个参数First argument
 [ FILE1 -ef FILE2 ]	Same files
 ```
 
+## 数组
+
+
 # 任务场景
 
 # 常见问题
