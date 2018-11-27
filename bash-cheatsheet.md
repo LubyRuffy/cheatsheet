@@ -7,7 +7,7 @@ echo "$NAME"
 echo "${NAME}!"
 ```
 
-* 字符串
+* 字符串引号
 ```
 NAME="John"
 echo "Hi $NAME"  #=> Hi John
