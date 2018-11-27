@@ -105,6 +105,12 @@ ${FOO/%from/to}	Replace suffix
 ${FOO/#from/to}	Replace prefix
 ```
 
+## 数字运算
+```bash
+$((a + 200))      # Add 200 to $a
+$((RANDOM%=200))  # Random number 0..200
+```
+
 ## 循环
 * 基础循环
 ```bash
