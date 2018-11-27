@@ -164,6 +164,7 @@ myfunc() {
     echo "abc"
 }
 result=$(myfunc)
+echo result
 ``` 
 
 ## 条件判断
