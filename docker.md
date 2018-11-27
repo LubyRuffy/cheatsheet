@@ -31,12 +31,9 @@ docker rmi <image>
 * 查看运行的容器：
 ```
 docker ps 
+docker ps -a #查看创建的所有容器：
 ```
 
-* 查看创建的所有容器：
-```
-docker ps -a
-```
 
 # 任务场景
 * 太占磁盘空间，需要删除
