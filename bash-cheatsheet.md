@@ -86,7 +86,7 @@ DIR=${SRC%$BASE}  #=> "/path/to/" (dirpath)
 ```
 
 ```
-${FOO%suffix}	Remove suffix
+${FOO%suffix}	删除后缀Remove suffix
 ${FOO#prefix}	Remove prefix
 ${FOO%%suffix}	Remove long suffix
 ${FOO##prefix}	Remove long prefix
