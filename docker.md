@@ -36,8 +36,8 @@ docker ps -a #查看创建的所有容器：
 
 * 在容器执行命令：
 ```
-docker exec -it app_web_1 tail -f logs/development.log
-docker exec -it app_web_1 bash
+docker exec -it <container> tail -f logs/development.log
+docker exec -it <container> bash
 ```
 
 
