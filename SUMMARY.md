@@ -9,5 +9,5 @@
 * [Windows批处理](windowspi-chu-li.md)
 * [VIM编辑器](vim.md)
 * [Linux基础命令](linuxji-chu-ming-ling.md)
-* git
+* [git代码管理](git.md)
 
