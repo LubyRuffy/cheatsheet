@@ -219,7 +219,13 @@ $1	第一个参数First argument
 ```
 
 ## 数组
-
+### 定义数组
+```bash
+Fruits=('Apple' 'Banana' 'Orange')
+Fruits[0]="Apple"
+Fruits[1]="Banana"
+Fruits[2]="Orange"
+```
 
 # 任务场景
 
