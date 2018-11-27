@@ -117,7 +117,9 @@ ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 AFTER
 another_field
 ```
 * 主键
+```sql
 
+```
 
 # 任务场景
 
