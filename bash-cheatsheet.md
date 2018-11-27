@@ -87,7 +87,7 @@ echo {A,B}.js
 
 ### 文件判断
 ```
-[ -e FILE ]	文件存在Exists
+[ -e FILE ]	文件存在（包含目录和文件）Exists
 [ -r FILE ]	文件可读Readable
 [ -h FILE ]	文件时链接Symlink
 [ -d FILE ]	目录存在Directory
