@@ -49,8 +49,8 @@ fi
 ```bash
 echo {A,B}.js  => A.js B.js
 {A,B}	展开就是 A B
-{A,B}.js	Same as A.js B.js
-{1..5}	Same as 1 2 3 4 5
+{A,B}.js	展开就是 A.js B.js
+{1..5}	展开就是 1 2 3 4 5
 ```
 
 ## 参数
