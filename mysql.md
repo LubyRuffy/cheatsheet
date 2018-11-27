@@ -34,6 +34,8 @@ SELECT DISTINCT field1 FROM ...
 SELECT DISTINCT field1, field2 FROM ...
 ```
 
+* 查询select-join
+```sql
 
 
 # 任务场景
