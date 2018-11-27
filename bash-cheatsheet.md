@@ -91,7 +91,7 @@ echo {A,B}.js
 [ -r FILE ]	文件可读Readable
 [ -h FILE ]	文件时链接Symlink
 [ -d FILE ]	目录存在Directory
-[ -w FILE ]	Writable
+[ -w FILE ]	文件可写Writable
 [ -s FILE ]	Size is > 0 bytes
 [ -f FILE ]	File
 [ -x FILE ]	Executable
