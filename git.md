@@ -36,7 +36,7 @@ env GIT_SSL_NO_VERIFY=true git clone https://host_name/git/project.git
 ```
  已经clone的情况下：
 ```bash
-git config http.sslVerify "false” 
+git config http.sslVerify "false"
 ```
 
 # 常见问题
