@@ -92,4 +92,4 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 * run和create有什么区别？
 * export/import 与 save和load有什么区别？
 * stop和kill有什么区别？
-kill直接
+kill直接发送SIGKILL（默认）信号，stop先尝试发送
