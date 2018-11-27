@@ -47,7 +47,7 @@ fi
 
 * 花括号展开
 ```bash
-echo {A,B}.js
+echo {A,B}.js  => A.js B.js
 {A,B}	Same as A B
 {A,B}.js	Same as A.js B.js
 {1..5}	Same as 1 2 3 4 5
