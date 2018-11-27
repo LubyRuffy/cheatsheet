@@ -99,5 +99,5 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 * run运行后的容器如何修改环境变量？
 
-    docker inspect bmhproxy 查看容器的目录，比如/var/lib/docker/containers/7803bd0b55fcc47dc37fa5acfa00ef3b225ace4b9a3a634e998447d343e61037/
+    docker inspect <container> 查看容器的目录，比如/var/lib/docker/containers/7803bd0b55fcc47dc37fa5acfa00ef3b225ace4b9a3a634e998447d343e61037/
     MAC在~/Library/Containers/
