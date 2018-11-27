@@ -48,11 +48,6 @@ docker attach <name>
 docker stop <name>
 ```
 
-* 删除容器（每次run一下都会生成一个新的容器）：
-```
-docker ps -a | grep elastic | awk '{print $1}' | xargs docker rm
-```
-
 * 查看网络配置：
 ```
 docker network ls
