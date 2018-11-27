@@ -54,6 +54,17 @@ echo {A,B}.js  => A.js B.js
 ```
 
 ## 参数
+```
+name="John"
+echo ${name}
+echo ${name/J/j}    #=> "john" (substitution)
+echo ${name:0:2}    #=> "Jo" (slicing)
+echo ${name::2}     #=> "Jo" (slicing)
+echo ${name::-1}    #=> "Joh" (slicing)
+echo ${food:-Cake}  #=> $food or "Cake"
+length=2
+echo ${name:0:length}  #=> "Jo"
+```
 
 ## 循环
 
