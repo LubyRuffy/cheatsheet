@@ -14,7 +14,9 @@ echo "Hi $NAME"  #=> Hi John
 echo 'Hi $NAME'  #=> Hi $NAME
 ```
 
-
+* 函数
+```
+```
 
 # 任务场景
 
