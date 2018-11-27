@@ -172,4 +172,9 @@ bash-4.4$ X="abc.123.com";echo ${X%.*}
 abc.123
 bash-4.4$ X="abc.123.com";echo ${X%%.*}
 abc
+同样
+bash-4.4$ X="abc.123.com";echo ${X##*.}
+com
+bash-4.4$ X="abc.123.com";echo ${X#*.}
+123.com
 ```
