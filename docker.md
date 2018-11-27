@@ -24,8 +24,6 @@ docker exec -it app_web_1 tail -f logs/development.log
 docker exec -it app_web_1 bash
 ```
 
-
-
 * 删除镜像：
 ```
 docker rmi <image>
