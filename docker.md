@@ -89,5 +89,6 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 ```
 
 # 常见问题
-* docker run和create有什么区别？
+* run和create有什么区别？
 * export/import 与 save和load有什么区别？
+* stop和kill
