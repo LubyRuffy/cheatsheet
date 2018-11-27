@@ -22,7 +22,6 @@ docker run —it --rm <image> #运行后删除（在临时生成文件时很有�
 ```
 docker exec -it app_web_1 tail logs/development.log
 docker exec -it app_web_1 bash
-
 ```
 
 
