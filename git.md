@@ -31,7 +31,7 @@ git rm --cached -r somedir
 
 * https提示证书错误
  第一次clone的情况下：
- env GIT_SSL_NO_VERIFY=true git clone https://<host_name/git/project.git
+ env GIT_SSL_NO_VERIFY=true git clone https://host_name/git/project.git
  已经clone的情况下：git config http.sslVerify "false” 
 
 # 常见问题
