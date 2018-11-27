@@ -266,10 +266,17 @@ lines=(`cat "logfile"`)                 # Read from file
 pwd # still in first directory
 ```
 
-### 子命令
+### case/switch
 ```bash
-(cd somedir; echo "I'm now in $PWD")
-pwd # still in first directory
+case "$1" in
+  start | up)
+    vagrant up
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|ssh}"
+    ;;
+esac
 ```
 
 ### 重定向
