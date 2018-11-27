@@ -1,6 +1,6 @@
 # 基础知识
 * 变量
-```
+```bash
 NAME="John"
 echo $NAME
 echo "$NAME"
@@ -8,7 +8,7 @@ echo "${NAME}!"
 ```
 
 * 字符串引号
-```
+```bash
 NAME="John"
 echo "Hi $NAME"  #=> Hi John
 echo 'Hi $NAME'  #=> Hi $NAME
