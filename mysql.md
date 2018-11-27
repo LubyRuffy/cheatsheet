@@ -36,7 +36,9 @@ SELECT DISTINCT field1, field2 FROM ...
 
 * 查询select-join
 ```sql
-
+SELECT ... FROM t1 JOIN t2 ON t1.id1 = t2.id2 WHERE condition
+SELECT ... FROM t1 LEFT JOIN t2 ON t1.id1 = t2.id2 WHERE condition
+SELECT ... FROM t1 JOIN (t2 JOIN t3 ON ...) ON ...
 ```
 
 # 任务场景
