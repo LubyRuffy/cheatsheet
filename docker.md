@@ -11,10 +11,12 @@ docker pull <image>
 ```
 
 * 运行镜像：
+```
     - docker run -itd <image>
     - docker run -itd -v <local>:<container> <image>
     - docker run -p 127.0.0.1:9200:9200 <image> <cmd>
     - docker —name test123 <image>
+```
 
 * 删除镜像：
 docker rmi <image>
