@@ -113,6 +113,15 @@ for i in /etc/rc.*; do
 done
 ```
 
+* 基础循环
+```bash
+for i in /etc/rc.*; do
+  echo $i
+done
+```
+
+
+
 ## 函数
 
 ## 条件判断
