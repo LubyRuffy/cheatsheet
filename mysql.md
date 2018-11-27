@@ -3,7 +3,7 @@
 # 任务场景
 * 创建数据库：
 ```sql
-CREATE DATABASE `webdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE <database> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 * 创建帐号：
