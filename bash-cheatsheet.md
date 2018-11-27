@@ -227,6 +227,18 @@ Fruits[1]="Banana"
 Fruits[2]="Orange"
 ```
 
+### 操作数组
+```bash
+Fruits=("${Fruits[@]}" "Watermelon")    # Push
+Fruits+=('Watermelon')                  # Also Push
+Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
+unset Fruits[2]                         # Remove one item
+Fruits=("${Fruits[@]}")                 # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
+lines=(`cat "logfile"`)                 # Read from file
+```
+
+
 # 任务场景
 
 # 常见问题
