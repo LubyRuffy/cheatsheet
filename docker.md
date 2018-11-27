@@ -15,7 +15,7 @@ docker run -itd <image>
 docker run -itd -v <local>:<container> <image>
 docker run -p 127.0.0.1:9200:9200 <image> <cmd>
 docker run —name test123 <image>
-docker run —it --rm <image> #运行后删除
+docker run —it --rm <image> #运行后删除（在临时生成文件时很有用，比如编译）
 ```
 
 * 删除镜像：
