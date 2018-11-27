@@ -59,7 +59,12 @@ condition1 OR condition2
 INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
 ```
 
-* 
+* 删除
+```sql
+INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
+```
+
+
 
 # 任务场景
 
