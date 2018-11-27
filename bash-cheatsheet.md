@@ -120,7 +120,7 @@ while true; do
 done
 ```
 
-* 死循环
+* 指定范围
 ```bash
 while true; do
   ···
