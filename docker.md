@@ -1,6 +1,8 @@
 # 基础知识
 * 列出本地镜像：
-docker <image>
+```
+docker images
+```
 
 
 * 获取镜像
