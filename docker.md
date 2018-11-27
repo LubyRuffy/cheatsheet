@@ -13,7 +13,8 @@ docker pull <image>
     - docker —name test123 <image>
 
 删除镜像：
-docker rmi <image id>
+docker rmi <image>
+
 
 # 任务场景
 * 太占磁盘空间，需要删除
