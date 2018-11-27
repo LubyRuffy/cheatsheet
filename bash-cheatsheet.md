@@ -65,7 +65,25 @@ echo ${food:-Cake}  #=> $food or "Cake"
 length=2
 echo ${name:0:length}  #=> "Jo"
 ```
+```
+STR="/path/to/foo.cpp"
+echo ${STR%.cpp}    # /path/to/foo
+echo ${STR%.cpp}.o  # /path/to/foo.o
 
+echo ${STR##*.}     # cpp (extension)
+echo ${STR##*/}     # foo.cpp (basepath)
+
+echo ${STR#*/}      # path/to/foo.cpp
+echo ${STR##*/}     # foo.cpp
+
+echo ${STR/foo/bar} # /path/to/bar.cpp
+STR="Hello world"
+echo ${STR:6:5}   # "world"
+echo ${STR:-5:5}  # "world"
+SRC="/path/to/foo.cpp"
+BASE=${SRC##*/}   #=> "foo.cpp" (basepath)
+DIR=${SRC%$BASE}  #=> "/path/to/" (dirpath)
+```
 ## 循环
 
 ## 函数
