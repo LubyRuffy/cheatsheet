@@ -12,8 +12,11 @@ docker pull <image>
     - docker run -p 127.0.0.1:9200:9200 <image> <cmd>
     - docker —name test123 <image>
 
-删除镜像：
+* 删除镜像：
 docker rmi <image>
+
+* 删除tag：
+docker rmi <image id>
 
 
 # 任务场景
