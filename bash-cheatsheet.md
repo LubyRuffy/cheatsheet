@@ -108,7 +108,9 @@ ${FOO/#from/to}	Replace prefix
 ## 循环
 * 基础循环
 ```bash
-
+for i in /etc/rc.*; do
+  echo $i
+done
 ```
 
 ## 函数
