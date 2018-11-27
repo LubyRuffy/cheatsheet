@@ -29,7 +29,9 @@ git commit && git push
 git commit || echo "Commit failed"
 ```
 
-
+* 执行命令
+```
+```
 
 # 任务场景
 
