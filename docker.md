@@ -34,13 +34,19 @@ docker ps -a #查看创建的所有容器：
 ```
 
 * 启动容器：
+```
 docker start <name>
+```
 
 * 接入运行中的容器：
+```
 docker attach <name>
+```
 
 * 停止容器：
+```
 docker stop <name>
+```
 
 * 删除容器（每次run一下都会生成一个新的容器）：
 docker ps -a | grep elastic | awk '{print $1}' | xargs docker rm
