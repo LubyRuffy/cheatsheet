@@ -70,12 +70,11 @@ echo {A,B}.js
 
 数字
 [ NUM -eq NUM ]	等于
-
-[ NUM -ne NUM ]	Not equal
-[ NUM -lt NUM ]	Less than
-[ NUM -le NUM ]	Less than or equal
-[ NUM -gt NUM ]	Greater than
-[ NUM -ge NUM ]	Greater than or equal
+[ NUM -ne NUM ]	不等于
+[ NUM -lt NUM ]	小于Less than
+[ NUM -le NUM ]	小于等于Less than or equal
+[ NUM -gt NUM ]	大于Greater than
+[ NUM -ge NUM ]	大于等于Greater than or equal
 
 其他
 [[ STRING =~ STRING ]]	Regexp
