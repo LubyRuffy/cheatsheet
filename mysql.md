@@ -98,7 +98,6 @@ DROP TABLE table1, table2, ...
 
 * 修改表
 ```sql
-
 ALTER TABLE table MODIFY field1 type1
 ALTER TABLE table MODIFY field1 type1 NOT NULL ...
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1
@@ -109,8 +108,7 @@ ALTER TABLE table ADD new_name_field1 type1
 ALTER TABLE table ADD new_name_field1 type1 FIRST
 ALTER TABLE table ADD new_name_field1 type1 AFTER another_field
 ALTER TABLE table DROP field1
-ALTER TABLE table ADD INDEX (field);
-  
+ALTER TABLE table ADD INDEX (field); 
 *Change field order*
 ALTER TABLE table MODIFY field1 type1 FIRST
 ALTER TABLE table MODIFY field1 type1 AFTER another_field
