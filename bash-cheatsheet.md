@@ -94,7 +94,7 @@ echo {A,B}.js
 [ -w FILE ]	文件可写Writable
 [ -s FILE ]	文件大小 > 0 bytes
 [ -f FILE ]	File
-[ -x FILE ]	Executable
+[ -x FILE ]	文件可执行Executable
 [ FILE1 -nt FILE2 ]	1 is more recent than 2
 [ FILE1 -ot FILE2 ]	2 is more recent than 1
 [ FILE1 -ef FILE2 ]	Same files
