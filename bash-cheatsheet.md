@@ -105,7 +105,7 @@ ${FOO/#from/to}	Replace prefix
 完整参考：http://man7.org/linux/man-pages/man1/test.1.html
 
 ### 运算判断
-```
+```bash
 字符串
 [ STRING = STRING ]	等于
 [ STRING != STRING ]	不等于
