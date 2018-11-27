@@ -253,8 +253,11 @@ Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
 lines=(`cat "logfile"`)                 # Read from file
 ```
 
-
 # 任务场景
+* 生成随机数：
+```bash
+$((RANDOM%=200)) 
+```
 
 # 常见问题
 * -e -f -d的区别是什么？
