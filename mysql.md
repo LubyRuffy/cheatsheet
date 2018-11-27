@@ -43,7 +43,15 @@ SELECT ... FROM t1 JOIN (t2 JOIN t3 ON ...) ON ...
 
 * 查询条件
 ```sql
-
+field1 = value1
+field1 <> value1
+field1 LIKE 'value _ %'
+field1 IS NULL
+field1 IS NOT NULL
+field1 IS IN (value1, value2)
+field1 IS NOT IN (value1, value2)
+condition1 AND condition2
+condition1 OR condition2
 ```
 
 # 任务场景
