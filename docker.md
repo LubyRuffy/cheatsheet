@@ -46,6 +46,13 @@ docker exec -it app_web_1 bash
 docker start <name>
 ```
 
+* 查看容器配置：
+```
+docker inspect <name>
+```
+
+
+
 * 接入运行中的容器：
 ```
 docker attach <name>
@@ -64,11 +71,6 @@ docker network ls
 * 删除网络：
 ```
 docker network rm <network_id>
-```
-
-* 查看容器配置：
-```
-docker inspect <name>
 ```
 
 * 查看单个容器网络信息：
