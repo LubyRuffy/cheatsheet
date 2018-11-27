@@ -15,7 +15,7 @@ echo 'Hi $NAME'  #=> Hi $NAME
 ```
 
 * 函数
-```
+```bash
 get_name() {
   echo "John"
 }
