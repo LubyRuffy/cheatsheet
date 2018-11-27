@@ -171,8 +171,8 @@ echo result
 ```bash
 $#	参数个数
 $*	所有参数
-$@	All arguments, starting from first
-$1	First argument
+$@	所有参数, starting from first
+$1	第一个参数First argument
 ```
 
 ## 条件判断
