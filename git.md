@@ -17,8 +17,7 @@ git revert HEAD
  可以直接用服务器的代码：
 ```bash
 git reset --hard # 撤销所有修改
-
-git checkout HEAD <filepath>
+git checkout HEAD <filepath> # 撤销单个文件修改
 ```
  也可以所有文件：
 ```bash
