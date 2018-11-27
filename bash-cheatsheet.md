@@ -169,7 +169,7 @@ echo result
 
 ### 参数
 ```bash
-$#	Number of arguments
+$#	参数个数
 $*	All arguments
 $@	All arguments, starting from first
 $1	First argument
