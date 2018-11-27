@@ -122,7 +122,7 @@ done
 
 * 指定范围
 ```bash
-for i in {1..5}; do
+for i in {1..3}; do
     echo "Welcome $i"
 done
 ```
@@ -130,12 +130,10 @@ done
 Welcome 1
 Welcome 2
 Welcome 3
-Welcome 4
-Welcome 5
 ```
 也可以指定步长
 ```bash
-for i in {5..50..5}; do
+for i in {5..20..5}; do
     echo "Welcome $i"
 done
 ```
@@ -144,17 +142,7 @@ Welcome 5
 Welcome 10
 Welcome 15
 Welcome 20
-Welcome 25
-Welcome 30
-Welcome 35
-Welcome 40
-Welcome 45
-Welcome 50
 ```
-
-
-
-
 
 ## 函数
 
