@@ -19,10 +19,14 @@ docker —name test123 <image>
 ```
 
 * 删除镜像：
+```
 docker rmi <image>
+```
 
 * 删除tag：
+```
 docker rmi <image id>
+```
 
 
 # 任务场景
