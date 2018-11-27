@@ -25,7 +25,7 @@ docker rmi <image>
 
 * 删除tag：
 ```
-docker rmi <image id>
+docker rmi <image>
 ```
 
 
