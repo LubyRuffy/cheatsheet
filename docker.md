@@ -3,8 +3,8 @@
 docker images
 
 * 运行镜像：
-- docker run hello-world
-- 
+    - docker run -d hello-world
+    - 
 
 # 任务场景
 * 太占磁盘空间，需要删除
