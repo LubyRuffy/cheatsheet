@@ -267,6 +267,7 @@ pwd # still in first directory
 ```
 
 ### case
+里面的内容可以正则表达式：
 ```bash
 case "$1" in
   start | up)
