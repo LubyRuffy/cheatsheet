@@ -77,7 +77,7 @@ echo {A,B}.js
 [ NUM -ge NUM ]	大于等于Greater than or equal
 
 其他
-[[ STRING =~ STRING ]]	Regexp
+[[ STRING =~ STRING ]]	正则Regexp
 (( NUM < NUM ))	Numeric conditions
 [ -o noclobber ]	If OPTIONNAME is enabled
 [ ! EXPR ]	Not
