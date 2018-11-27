@@ -134,6 +134,7 @@ SET PASSWORD FOR 'user'@'host' = PASSWORD('new_pass')
 SET PASSWORD = OLD_PASSWORD('new_pass')
 DROP USER 'user'@'host' -- host ‘%’ indicates any host.
 ```
+grant之后记得flush privileges;
 
 
 
