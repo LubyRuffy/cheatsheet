@@ -17,7 +17,7 @@ git revert HEAD
  ：
 ```bash
 git reset --hard # 可以直接用服务器的代码
-git checkout HEAD <filepath> # 也可以针对单个文件修改
+git checkout HEAD <filepath> # 也可以针对单个文件
 ```
 
 * 命令行记住密码：git config --global credential.helper store
