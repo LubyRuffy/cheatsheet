@@ -54,7 +54,7 @@ echo {A,B}.js  => A.js B.js
 ```
 
 ## 参数
-```
+```bash
 name="John"
 echo ${name}
 echo ${name/J/j}    #=> "john" (substitution)
@@ -65,7 +65,8 @@ echo ${food:-Cake}  #=> $food or "Cake"
 length=2
 echo ${name:0:length}  #=> "Jo"
 ```
-```
+
+```bash
 STR="/path/to/foo.cpp"
 echo ${STR%.cpp}    # /path/to/foo
 echo ${STR%.cpp}.o  # /path/to/foo.o
