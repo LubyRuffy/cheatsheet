@@ -19,7 +19,11 @@ git reset --hard # 可以直接用服务器的代码
 git checkout HEAD <filepath> # 也可以针对单个文件
 ```
 
-* 命令行记住密码：git config --global credential.helper store
+* 命令行记住密码
+```bash
+git config --global credential.helper store
+```
+
 * 从仓库删除但是保留本地文件：git rm --cached -r somedir
 * https提示证书错误
  第一次clone的情况下：
