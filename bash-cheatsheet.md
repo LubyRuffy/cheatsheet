@@ -23,6 +23,17 @@ get_name() {
 echo "You are $(get_name)"
 ```
 
+* 函数
+```
+get_name() {
+  echo "John"
+}
+
+echo "You are $(get_name)"
+```
+
+
+
 # 任务场景
 
 # 常见问题
