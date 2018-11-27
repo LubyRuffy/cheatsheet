@@ -92,7 +92,7 @@ echo {A,B}.js
 [ -h FILE ]	文件时链接Symlink
 [ -d FILE ]	目录存在Directory
 [ -w FILE ]	文件可写Writable
-[ -s FILE ]	Size is > 0 bytes
+[ -s FILE ]	文件大小 > 0 bytes
 [ -f FILE ]	File
 [ -x FILE ]	Executable
 [ FILE1 -nt FILE2 ]	1 is more recent than 2
