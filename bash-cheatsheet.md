@@ -277,7 +277,6 @@ python hello.py &>/dev/null    # stdout and stderr to (null)
 python hello.py < foo.txt # 读取内容
 ```
 
-
 # 任务场景
 * 生成随机数：
 ```bash
