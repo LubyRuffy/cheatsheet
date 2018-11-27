@@ -90,7 +90,7 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 # 常见问题
 * run和create有什么区别？
-
+    docker create命令能够基于镜像创建容器。 该命令执行的效果类似于docker run -d，即创建一个将在系统后台运行的容器。 但是与docker run -d不同的是，docker create创建的容器并未实际启动，还需要执行docker start命令或docker run命令以启动容器。 事实上，docker create命令常用于在启动容器之前进行必要的设置。
 * export/import 与 save和load有什么区别？
 
 * stop和kill有什么区别？
