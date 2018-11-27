@@ -6,7 +6,9 @@ docker images
 
 
 * 获取镜像
+```
 docker pull <image>
+```
 
 * 运行镜像：
     - docker run -itd <image>
