@@ -40,8 +40,6 @@ echo "I'm in $(pwd)"
 echo "I'm in `pwd`"
 ```
 
-
-
 # 任务场景
 
 # 常见问题
