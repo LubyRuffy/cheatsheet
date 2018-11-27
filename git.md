@@ -13,7 +13,8 @@ git revert HEAD
 ```
 
 * 如何处理error: Your local changes to the following files would be overwritten by merge错误
- 如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候,在发布这个配置文件的时候,会发生代码冲突。直接用服务器的代码："git checkout HEAD filepath"，也可以所有文件："git reset --hard"
+ 如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候,在发布这个配置文件的时候,会发生代码冲突。
+ 可以直接用服务器的代码："git checkout HEAD filepath"，也可以所有文件："git reset --hard"
 * 命令行记住密码：git config --global credential.helper store
 * 从仓库删除但是保留本地文件：git rm --cached -r somedir
 * https提示证书错误
