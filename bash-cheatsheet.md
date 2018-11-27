@@ -89,7 +89,7 @@ echo {A,B}.js
 ```
 [ -e FILE ]	文件存在Exists
 [ -r FILE ]	文件可读Readable
-[ -h FILE ]	文件时连接Symlink
+[ -h FILE ]	文件时链接Symlink
 [ -d FILE ]	Directory
 [ -w FILE ]	Writable
 [ -s FILE ]	Size is > 0 bytes
