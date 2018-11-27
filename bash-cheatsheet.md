@@ -64,7 +64,7 @@ echo {A,B}.js
 ```
 [ STRING = STRING ]	等于
 [ STRING != STRING ]	不等于
-[ -z STRING ]	Empty string
+[ -z STRING ]	空字符
 [ -n STRING ]	Not empty string
 [ NUM -eq NUM ]	Equal
 [ NUM -ne NUM ]	Not equal
