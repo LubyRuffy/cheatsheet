@@ -45,11 +45,10 @@ fi
 
 * 花括号展开
 ```bash
-if [ -z "$string" ]; then
-  echo "String is empty"
-elif [ -n "$string" ]; then
-  echo "String is not empty"
-fi
+echo {A,B}.js
+{A,B}	Same as A B
+{A,B}.js	Same as A.js B.js
+{1..5}	Same as 1 2 3 4 5
 ```
 
 
