@@ -54,12 +54,12 @@ condition1 AND condition2
 condition1 OR condition2
 ```
 
-* 插入
+* 插入记录
 ```sql
 INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
 ```
 
-* 删除
+* 删除记录
 ```sql
 DELETE FROM table1 / TRUNCATE table1
 DELETE FROM table1 WHERE condition
