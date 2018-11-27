@@ -14,7 +14,7 @@ flush privileges;
 
 * 修改列的默认值：
 ```sql
-ALTER TABLE <table> MODIFY COLUMN state integer NOT NULL DEFAULT 0;
+ALTER TABLE <table> MODIFY COLUMN <column> integer NOT NULL DEFAULT 0;
 ```
 
 # 常见问题
