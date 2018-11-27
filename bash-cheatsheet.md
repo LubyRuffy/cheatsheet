@@ -278,7 +278,6 @@ python hello.py < foo.txt
 ```
 
 
-
 # 任务场景
 * 生成随机数：
 ```bash
