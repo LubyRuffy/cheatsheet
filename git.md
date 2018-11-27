@@ -24,7 +24,11 @@ git checkout HEAD <filepath> # 也可以针对单个文件
 git config --global credential.helper store
 ```
 
-* 从仓库删除但是保留本地文件：git rm --cached -r somedir
+* 从仓库删除但是保留本地文件：
+```bash
+git rm --cached -r somedir
+```
+
 * https提示证书错误
  第一次clone的情况下：
  env GIT_SSL_NO_VERIFY=true git clone https://<host_name/git/project.git
