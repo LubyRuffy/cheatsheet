@@ -57,7 +57,6 @@ echo {A,B}.js  => A.js B.js
 ```bash
 # 字符串
 
-
 : '多行
 注释
 '
