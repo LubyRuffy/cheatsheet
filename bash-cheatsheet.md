@@ -16,6 +16,11 @@ echo 'Hi $NAME'  #=> Hi $NAME
 
 * 函数
 ```
+get_name() {
+  echo "John"
+}
+
+echo "You are $(get_name)"
 ```
 
 # 任务场景
