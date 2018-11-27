@@ -228,10 +228,12 @@ Fruits[2]="Orange"
 ```
 ### 获取数组信息
 ```bash
-Fruits=('Apple' 'Banana' 'Orange')
-Fruits[0]="Apple"
-Fruits[1]="Banana"
-Fruits[2]="Orange"
+echo ${Fruits[0]}           # Element #0
+echo ${Fruits[@]}           # All elements, space-separated
+echo ${#Fruits[@]}          # Number of elements
+echo ${#Fruits}             # String length of the 1st element
+echo ${#Fruits[3]}          # String length of the Nth element
+echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
 ```
 
 ### 操作数组
