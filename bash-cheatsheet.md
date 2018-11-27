@@ -106,6 +106,10 @@ ${FOO/#from/to}	Replace prefix
 ```
 
 ## 循环
+* 基础循环
+```bash
+
+```
 
 ## 函数
 
