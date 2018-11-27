@@ -136,7 +136,10 @@ DROP USER 'user'@'host' -- host ‘%’ indicates any host.
 ```
 grant之后记得：flush privileges;
 
+* 数据类型
+```
 
+```
 
 # 任务场景
 
