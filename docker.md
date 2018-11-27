@@ -18,12 +18,6 @@ docker run —name test123 <image>
 docker run —it --rm <image> #运行后删除（在临时生成文件时很有用，比如编译）
 ```
 
-* 在容器执行命令：
-```
-docker exec -it app_web_1 tail -f logs/development.log
-docker exec -it app_web_1 bash
-```
-
 * 删除镜像：
 ```
 docker rmi <image>
@@ -39,6 +33,14 @@ docker rmi <image>
 docker ps 
 docker ps -a #查看创建的所有容器：
 ```
+
+* 在容器执行命令：
+```
+docker exec -it app_web_1 tail -f logs/development.log
+docker exec -it app_web_1 bash
+```
+
+
 
 * 启动容器：
 ```
