@@ -132,6 +132,17 @@ done
 for i in {5..50..5}; do
     echo "Welcome $i"
 done
+
+Welcome 5
+Welcome 10
+Welcome 15
+Welcome 20
+Welcome 25
+Welcome 30
+Welcome 35
+Welcome 40
+Welcome 45
+Welcome 50
 ```
 
 
