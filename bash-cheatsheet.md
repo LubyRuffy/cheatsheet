@@ -62,7 +62,7 @@ echo {A,B}.js
 ## 条件
 ### 运算判断
 ```
-[ STRING = STRING ]	Equal
+[ STRING = STRING ]	等于
 [ STRING != STRING ]	Not Equal
 [ -z STRING ]	Empty string
 [ -n STRING ]	Not empty string
