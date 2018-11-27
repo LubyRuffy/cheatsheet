@@ -226,6 +226,7 @@ Fruits[0]="Apple"
 Fruits[1]="Banana"
 Fruits[2]="Orange"
 ```
+
 ### 获取数组信息
 ```bash
 echo ${Fruits[0]}           # Element #0
@@ -235,7 +236,12 @@ echo ${#Fruits}             # String length of the 1st element
 echo ${#Fruits[3]}          # String length of the Nth element
 echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
 ```
-
+### 遍历数组
+```bash
+for i in "${arrayName[@]}"; do
+  echo $i
+done
+```
 ### 操作数组
 ```bash
 Fruits=("${Fruits[@]}" "Watermelon")    # Push
