@@ -92,6 +92,12 @@ docker system prune
 docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 ```
 
+* 发布到hub.docker.io
+```
+docker login 确保登陆成功
+docker
+```
+
 # 常见问题
 * run和create有什么区别？
 
