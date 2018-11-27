@@ -28,6 +28,12 @@ docker rmi <image>
 docker rmi <image>
 ```
 
+* 查看运行的容器：
+```
+docker rmi <image>
+```
+
+
 
 # 任务场景
 * 太占磁盘空间，需要删除
