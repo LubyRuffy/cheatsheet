@@ -31,6 +31,8 @@ git commit || echo "Commit failed"
 
 * 执行命令
 ```
+echo "I'm in $(pwd)"
+echo "I'm in `pwd`"
 ```
 
 # 任务场景
