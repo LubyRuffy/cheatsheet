@@ -18,6 +18,13 @@ docker run —name test123 <image>
 docker run —it --rm <image> #运行后删除（在临时生成文件时很有用，比如编译）
 ```
 
+* 在容器执行命令：
+```
+docker rmi <image>
+```
+
+
+
 * 删除镜像：
 ```
 docker rmi <image>
