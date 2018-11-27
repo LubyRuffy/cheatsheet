@@ -1,10 +1,10 @@
 # 基础知识
 * 创建/删除数据库
 ```sql
-CREATE DATABASE dbNameYouWant
-CREATE DATABASE dbNameYouWant CHARACTER SET utf8
-DROP DATABASE dbNameYouWant
-ALTER DATABASE dbNameYouWant CHARACTER SET utf8
+CREATE DATABASE <database>
+CREATE DATABASE <database> CHARACTER SET utf8
+DROP DATABASE <database>
+ALTER DATABASE <database> CHARACTER SET utf8
 ```
 
 # 任务场景
