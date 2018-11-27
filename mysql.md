@@ -41,6 +41,11 @@ SELECT ... FROM t1 LEFT JOIN t2 ON t1.id1 = t2.id2 WHERE condition
 SELECT ... FROM t1 JOIN (t2 JOIN t3 ON ...) ON ...
 ```
 
+* 查询条件
+```sql
+
+```
+
 # 任务场景
 
 
