@@ -336,7 +336,7 @@ python hello.py < foo.txt # 读取内容
   
 * 生成随机IP：
   ```bash
-  echo $((RANDOM%=200))
+  echo $((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256))
   ```
 
 
