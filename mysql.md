@@ -118,7 +118,9 @@ another_field
 ```
 * 主键
 ```sql
-
+CREATE TABLE table (..., PRIMARY KEY (field1, field2))
+CREATE TABLE table (..., FOREIGN KEY (field1, field2) REFERENCES table2
+(t2_field1, t2_field2))
 ```
 
 # 任务场景
