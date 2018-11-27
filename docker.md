@@ -65,7 +65,7 @@ docker inspect <name>
 * 查看容器的资源占用情况：
 docker stats
 
-重命名
+* 重命名
 docker rename hello_world2 hi_world
 
 # 任务场景
