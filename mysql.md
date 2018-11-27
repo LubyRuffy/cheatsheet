@@ -19,6 +19,13 @@ flush privileges;
 ALTER TABLE <table> MODIFY COLUMN <column> integer NOT NULL DEFAULT 0;
 ```
 
+* 查询select
+```sql
+ALTER TABLE <table> MODIFY COLUMN <column> integer NOT NULL DEFAULT 0;
+```
+
+
+
 # 任务场景
 
 
