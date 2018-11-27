@@ -129,7 +129,9 @@ done
 
 也可以制定步长
 ```bash
-
+for i in {5..50..5}; do
+    echo "Welcome $i"
+done
 ```
 
 
