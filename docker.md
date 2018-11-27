@@ -90,6 +90,9 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 # 常见问题
 * run和create有什么区别？
+
 * export/import 与 save和load有什么区别？
+
 * stop和kill有什么区别？
+
 kill直接发送SIGKILL（默认）信号，stop先尝试发送SIGTERM信号（优雅地方式），等待一段时间过后再发送SIGKILL信号。所以默认都用stop，除非是想要强制关闭。
