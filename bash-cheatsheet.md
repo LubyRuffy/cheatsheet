@@ -160,7 +160,10 @@ myfunc "John"
 
 ### 返回值
 ```bash
-
+myfunc() {
+    echo "abc"
+}
+result=$(myfunc)
 ``` 
 
 ## 条件判断
