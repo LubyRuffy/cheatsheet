@@ -33,7 +33,10 @@ docker rmi <image>
 docker ps 
 ```
 
-
+* 查看创建的所有容器：
+```
+docker ps -a
+```
 
 # 任务场景
 * 太占磁盘空间，需要删除
