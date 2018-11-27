@@ -61,7 +61,7 @@ echo {A,B}.js  => A.js B.js
 多行注释用冒号空格单引号 : '任意换行'
 ```
 
-## 参数
+## 字符运算
 ```bash
 name="John"
 echo ${name}
