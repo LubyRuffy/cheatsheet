@@ -88,7 +88,7 @@ echo {A,B}.js
 ### 文件判断
 ```
 [ -e FILE ]	文件存在Exists
-[ -r FILE ]	文件刻度Readable
+[ -r FILE ]	文件可读Readable
 [ -h FILE ]	Symlink
 [ -d FILE ]	Directory
 [ -w FILE ]	Writable
