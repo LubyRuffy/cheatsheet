@@ -266,6 +266,12 @@ lines=(`cat "logfile"`)                 # Read from file
 pwd # still in first directory
 ```
 
+### 子命令
+```bash
+(cd somedir; echo "I'm now in $PWD")
+pwd # still in first directory
+```
+
 ### 重定向
 ```bash
 python hello.py > output.txt   # stdout to (file)
