@@ -96,7 +96,9 @@ DROP TABLE IF EXISTS table
 DROP TABLE table1, table2, ...
 ```
 
-*Alter*
+* 修改表
+```sql
+
 ALTER TABLE table MODIFY field1 type1
 ALTER TABLE table MODIFY field1 type1 NOT NULL ...
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1
