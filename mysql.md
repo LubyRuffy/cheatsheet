@@ -54,6 +54,11 @@ condition1 AND condition2
 condition1 OR condition2
 ```
 
+* 插入
+```sql
+INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
+```
+
 # 任务场景
 
 
