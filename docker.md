@@ -77,7 +77,9 @@ docker stats
 ```
 
 * 重命名
+```
 docker rename hello_world2 hi_world
+```
 
 # 任务场景
 * 太占磁盘空间，需要删除
