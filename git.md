@@ -14,9 +14,9 @@ git revert HEAD
 
 * 如何处理error: Your local changes to the following files would be overwritten by merge错误
  如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候,在发布这个配置文件的时候,会发生代码冲突。
- 可以直接用服务器的代码：
+ ：
 ```bash
-git reset --hard # 撤销所有修改
+git reset --hard # 可以直接用服务器的代码
 git checkout HEAD <filepath> # 撤销单个文件修改
 ```
 
