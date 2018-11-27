@@ -6,8 +6,6 @@ CREATE DATABASE <database> CHARACTER SET utf8
 DROP DATABASE <database>
 ALTER DATABASE <database> CHARACTER SET utf8
 ```
-
-# 任务场景
 * 创建数据库：
 ```sql
 CREATE DATABASE <database> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -23,5 +21,8 @@ flush privileges;
 ```sql
 ALTER TABLE <table> MODIFY COLUMN <column> integer NOT NULL DEFAULT 0;
 ```
+
+# 任务场景
+
 
 # 常见问题
