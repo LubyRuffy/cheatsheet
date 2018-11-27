@@ -69,7 +69,8 @@ echo {A,B}.js
 [ -n STRING ]	非空字符
 
 数字
-[ NUM -eq NUM ]	Equal
+[ NUM -eq NUM ]	等于
+
 [ NUM -ne NUM ]	Not equal
 [ NUM -lt NUM ]	Less than
 [ NUM -le NUM ]	Less than or equal
