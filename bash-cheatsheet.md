@@ -265,7 +265,8 @@ lines=(`cat "logfile"`)                 # Read from file
 (cd somedir; echo "I'm now in $PWD")
 pwd # still in first directory
 ```
-### 子命令
+
+### 重定向
 ```bash
 (cd somedir; echo "I'm now in $PWD")
 pwd # still in first directory
