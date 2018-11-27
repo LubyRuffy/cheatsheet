@@ -151,7 +151,7 @@ Welcome 20
 myfunc() {
     echo "hello $1"
 }
-# Same as above (alternate syntax)
+# 与上面相同 (alternate syntax)
 function myfunc() {
     echo "hello $1"
 }
