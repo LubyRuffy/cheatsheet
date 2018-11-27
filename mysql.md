@@ -132,7 +132,7 @@ REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'host'; -- all permissions
 SET PASSWORD = PASSWORD('new_pass')
 SET PASSWORD FOR 'user'@'host' = PASSWORD('new_pass')
 SET PASSWORD = OLD_PASSWORD('new_pass')
-DROP USER 'user'@'host'
+DROP USER 'user'@'host' /**/
 ```
 
 
