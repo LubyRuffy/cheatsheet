@@ -23,7 +23,7 @@ echo "You are $(get_name)"
 ```
 
 * 条件执行
-```
+```bash
 git commit && git push
 git commit || echo "Commit failed"
 ```
