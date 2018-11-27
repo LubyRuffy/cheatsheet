@@ -29,7 +29,7 @@ git commit || echo "Commit failed"
 ```
 
 * 执行命令
-```
+```bash
 echo "I'm in $(pwd)"
 echo "I'm in `pwd`"
 ```
