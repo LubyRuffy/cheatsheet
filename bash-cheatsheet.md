@@ -84,6 +84,28 @@ SRC="/path/to/foo.cpp"
 BASE=${SRC##*/}   #=> "foo.cpp" (basepath)
 DIR=${SRC%$BASE}  #=> "/path/to/" (dirpath)
 ```
+
+```
+${FOO%suffix}	Remove suffix
+${FOO#prefix}	Remove prefix
+${FOO%%suffix}	Remove long suffix
+${FOO##prefix}	Remove long prefix
+${FOO/from/to}	Replace first match
+${FOO//from/to}	Replace all
+${FOO/%from/to}	Replace suffix
+${FOO/#from/to}	Replace prefix
+Comments
+# Single line comment
+: '
+This is a
+multi line
+comment
+'
+Substrings
+${FOO:0:3}	Substring (position, length)
+${FOO:-3:3}	Substring from the right
+Length
+```
 ## 循环
 
 ## 函数
