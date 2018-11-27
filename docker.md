@@ -30,7 +30,7 @@ docker rmi <image>
 
 * 查看运行的容器：
 ```
-docker rmi <image>
+docker ps 
 ```
 
 
