@@ -1,4 +1,11 @@
 # 基础知识
+* 创建/删除数据库
+```sql
+CREATE DATABASE dbNameYouWant
+CREATE DATABASE dbNameYouWant CHARACTER SET utf8
+DROP DATABASE dbNameYouWant
+ALTER DATABASE dbNameYouWant CHARACTER SET utf8
+```
 
 # 任务场景
 * 创建数据库：
