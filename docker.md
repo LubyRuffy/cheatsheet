@@ -94,7 +94,8 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 * 发布到hub.docker.io
 ```
-docker login 确保登陆成功
+docker login 确保登陆成功，如果是自己的私有仓库，可以：docker login docker.yousite.com
+
 docker
 ```
 
