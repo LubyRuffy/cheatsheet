@@ -3,7 +3,7 @@
 docker images
 
 * 运行镜像：
-    - docker run -d hello-world
+    - docker run -itd hello-world
     - 
 
 # 任务场景
