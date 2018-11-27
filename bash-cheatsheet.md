@@ -167,7 +167,7 @@ x='a b'; [ -s “$x” ] || echo "0"
 ```
 
 * 删除前缀和长前缀有什么区别？
-```
+```bash
 bash-4.4$ X="abc.123.com";echo ${X%.*}
 abc.123
 bash-4.4$ X="abc.123.com";echo ${X%%.*}
