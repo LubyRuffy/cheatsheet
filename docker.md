@@ -103,8 +103,6 @@ docker login docker.yousite.com
 docker tag <image> docker.yousite.com/<project>/<image>:lastest
 docker push docker.yousite.com/<project>/<image>:lastest
 
-
-
 ```
 
 # 常见问题
