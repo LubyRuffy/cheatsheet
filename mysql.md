@@ -91,7 +91,6 @@ CREATE TEMPORARY TABLE table (...)
 ```
 * 删除表
 ```sql
-*Drop*
 DROP TABLE table
 DROP TABLE IF EXISTS table
 DROP TABLE table1, table2, ...
