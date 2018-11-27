@@ -43,22 +43,22 @@ docker exec -it <container> bash
 
 * 启动容器：
 ```
-docker start <name>
+docker start <container>
 ```
 
 * 查看容器配置：
 ```
-docker inspect <name>
+docker inspect <container>
 ```
 
 * 接入运行中的容器：
 ```
-docker attach <name>
+docker attach <container>
 ```
 
 * 停止容器：
 ```
-docker stop <name>
+docker stop <container>
 ```
 
 * 查看网络配置：
