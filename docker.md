@@ -41,7 +41,6 @@ docker exec -it app_web_1 bash
 ```
 
 
-
 * 启动容器：
 ```
 docker start <name>
