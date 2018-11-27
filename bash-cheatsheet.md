@@ -122,9 +122,14 @@ done
 
 * 指定范围
 ```bash
-while true; do
-  ···
+for i in {1..5}; do
+    echo "Welcome $i"
 done
+```
+
+也可以制定步长
+```bash
+
 ```
 
 
