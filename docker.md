@@ -94,9 +94,9 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
     docker create命令能够基于镜像创建容器。 该命令执行的效果类似于docker run -d，即创建一个将在系统后台运行的容器。 但是与docker run -d不同的是，docker create创建的容器并未实际启动，还需要执行docker start命令或docker run命令以启动容器。 事实上，docker create命令常用于在启动容器之前进行必要的设置。
     
 * export/import 与 save和load有什么区别？
-    - docker save保存的是镜像（image），docker export保存的是容器（container）；
-    - docker load用来载入镜像包，docker import用来载入容器包，但两者都会恢复为镜像；
-    - docker load不能对载入的镜像重命名，而docker import可以为镜像指定新名称。
+    1. docker save保存的是镜像（image），docker export保存的是容器（container）；
+    2. docker load用来载入镜像包，docker import用来载入容器包，但两者都会恢复为镜像；
+    3. docker load不能对载入的镜像重命名，而docker import可以为镜像指定新名称。
 
 
 * stop和kill有什么区别？
