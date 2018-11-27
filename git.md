@@ -38,5 +38,6 @@ env GIT_SSL_NO_VERIFY=true git clone https://host_name/git/project.git
 ```bash
 git config http.sslVerify "false"
 ```
+对于可信任的自签名的证书最好采用倒入证书为可信的方式。
 
 # 常见问题
