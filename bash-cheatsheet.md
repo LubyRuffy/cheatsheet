@@ -259,6 +259,13 @@ Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
 lines=(`cat "logfile"`)                 # Read from file
 ```
 
+## 其他
+### 子命令
+```bash
+(cd somedir; echo "I'm now in $PWD")
+pwd # still in first directory
+```
+
 # 任务场景
 * 生成随机数：
 ```bash
