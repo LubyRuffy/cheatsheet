@@ -59,7 +59,7 @@ echo {A,B}.js
 
 ## 函数
 
-## 条件
+## 条件判断
 完整参考：http://man7.org/linux/man-pages/man1/test.1.html
 
 ### 运算判断
