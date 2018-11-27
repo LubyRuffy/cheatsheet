@@ -120,6 +120,15 @@ while true; do
 done
 ```
 
+* 死循环
+```bash
+while true; do
+  ···
+done
+```
+
+
+
 
 
 ## 函数
