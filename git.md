@@ -19,10 +19,6 @@ git revert HEAD
 git reset --hard # 撤销所有修改
 git checkout HEAD <filepath> # 撤销单个文件修改
 ```
- 也可以所有文件：
-```bash
-
-```
 
 * 命令行记住密码：git config --global credential.helper store
 * 从仓库删除但是保留本地文件：git rm --cached -r somedir
