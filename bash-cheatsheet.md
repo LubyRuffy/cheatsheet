@@ -115,8 +115,8 @@ done
 
 * 死循环
 ```bash
-for i in /etc/rc.*; do
-  echo $i
+while true; do
+  ···
 done
 ```
 
