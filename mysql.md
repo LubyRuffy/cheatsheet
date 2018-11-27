@@ -88,7 +88,9 @@ CREATE TABLE table1 (fk_field1 type1, fk_field2 type2, ...,
  FOREIGN KEY (fk_field1, fk_field2) REFERENCES table2 (t2_fieldA, t2_fieldB))
 CREATE TABLE table IF NOT EXISTS (...)
 CREATE TEMPORARY TABLE table (...)
-  
+```
+* 删除表
+```sql
 *Drop*
 DROP TABLE table
 DROP TABLE IF EXISTS table
