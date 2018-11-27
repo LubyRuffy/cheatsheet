@@ -55,7 +55,7 @@ docker network ls
 
 * 删除网络：
 ```
-docker network rm atsdockers_mynet
+docker network rm <network_id>
 ```
 
 * 查看容器配置：
