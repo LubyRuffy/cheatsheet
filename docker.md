@@ -4,7 +4,6 @@
 docker images
 ```
 
-
 * 获取镜像
 ```
 docker pull <image>
