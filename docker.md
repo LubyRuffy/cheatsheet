@@ -101,7 +101,7 @@ docker push <project>/<image>:lastest
 如果是自己的私有仓库，可以：
 docker login docker.yousite.com
 docker tag <image> docker.yousite.com/<project>/<image>:lastest
-docker push <project>/<image>:lastest
+docker push docker.yousite.com/<project>/<image>:lastest
 
 
 
