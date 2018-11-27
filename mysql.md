@@ -11,7 +11,10 @@ CREATE DATABASE <database> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 grant all privileges on <database>.* to <user>@'%' identified by '<password>';
 flush privileges;
 ```
+
 * 修改列的默认值：
+```sql
 ALTER TABLE vulcallbacks MODIFY COLUMN state integer NOT NULL DEFAULT 0;
+```
 
 # 常见问题
