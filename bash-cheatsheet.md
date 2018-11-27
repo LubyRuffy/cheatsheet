@@ -23,7 +23,7 @@ get_name() {
 echo "You are $(get_name)"
 ```
 
-* 函数
+* 条件执行
 ```
 get_name() {
   echo "John"
