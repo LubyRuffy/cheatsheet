@@ -13,7 +13,7 @@ echo "${NAME}!"
 ```bash
 NAME="John"
 echo "Hi $NAME"  #=> Hi John
-echo 'Hi $NAME'  #=> Hi $NAME
+echo 'Hi $NAME'  #=> Hi $NAME 单引号不做解析
 ```
 
 * 函数
