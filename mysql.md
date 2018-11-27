@@ -76,7 +76,6 @@ table1.id1 = table2.id2 AND condition
 
 * 创建表
 ```sql
-*Create*
 CREATE TABLE table (field1 type1, field2 type2, ...)
 CREATE TABLE table (field1 type1, field2 type2, ..., INDEX (field))
 CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1))
