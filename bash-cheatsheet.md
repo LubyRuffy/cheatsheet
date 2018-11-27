@@ -132,7 +132,6 @@ for i in {5..50..5}; do
     echo "Welcome $i"
 done
 
-#=>
 Welcome 5
 Welcome 10
 Welcome 15
