@@ -1,3 +1,3 @@
-# My Awesome Book
+# Tech Cheat Sheet 
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+手机一些快速参考，作为知识库用，自用。
