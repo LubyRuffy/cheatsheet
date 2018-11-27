@@ -74,7 +74,7 @@ UPDATE table1, table2 SET field1=new_value1, field2=new_value2, ... WHERE
 table1.id1 = table2.id2 AND condition
 ```
 
-* 操作表
+* 创建表
 ```sql
 *Create*
 CREATE TABLE table (field1 type1, field2 type2, ...)
@@ -82,16 +82,12 @@ CREATE TABLE table (field1 type1, field2 type2, ..., INDEX (field))
 CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1))
 CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1,
 field2))
-    
 CREATE TABLE table1 (fk_field1 type1, field2 type2, ...,
   FOREIGN KEY (fk_field1) REFERENCES table2 (t2_fieldA))
     [ON UPDATE|ON DELETE] [CASCADE|SET NULL]
-  
 CREATE TABLE table1 (fk_field1 type1, fk_field2 type2, ...,
  FOREIGN KEY (fk_field1, fk_field2) REFERENCES table2 (t2_fieldA, t2_fieldB))
-  
 CREATE TABLE table IF NOT EXISTS (...)
-  
 CREATE TEMPORARY TABLE table (...)
   
 *Drop*
