@@ -5,7 +5,7 @@ CREATE DATABASE <database>
 CREATE DATABASE <database> CHARACTER SET utf8
 DROP DATABASE <database>
 ALTER DATABASE <database> CHARACTER SET utf8
-```sql
+
 CREATE DATABASE <database> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
