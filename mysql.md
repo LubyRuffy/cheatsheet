@@ -125,9 +125,14 @@ CREATE TABLE table (..., FOREIGN KEY (field1, field2) REFERENCES table2
 
 * 用户权限
 ```sql
-CREATE TABLE table (..., PRIMARY KEY (field1, field2))
-CREATE TABLE table (..., FOREIGN KEY (field1, field2) REFERENCES table2
-(t2_field1, t2_field2))
+GRANT ALL PRIVILEGES ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT, INSERT, DELETE ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+REVOKE ALL PRIVILEGES ON base.* FROM 'user'@'host'; -- one permission only
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'host'; -- all permissions
+SET PASSWORD = PASSWORD('new_pass')
+SET PASSWORD FOR 'user'@'host' = PASSWORD('new_pass')
+SET PASSWORD = OLD_PASSWORD('new_pass')
+DROP USER 'user'@'host'
 ```
 
 
