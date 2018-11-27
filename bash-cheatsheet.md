@@ -34,10 +34,13 @@ echo "I'm in $(pwd)"
 echo "I'm in `pwd`"
 ```
 
-* 执行命令
+* 条件判断
 ```bash
-echo "I'm in $(pwd)"
-echo "I'm in `pwd`"
+if [ -z "$string" ]; then
+  echo "String is empty"
+elif [ -n "$string" ]; then
+  echo "String is not empty"
+fi
 ```
 
 # 任务场景
