@@ -95,7 +95,8 @@ CREATE TEMPORARY TABLE table (...)
 DROP TABLE table
 DROP TABLE IF EXISTS table
 DROP TABLE table1, table2, ...
-  
+```
+
 *Alter*
 ALTER TABLE table MODIFY field1 type1
 ALTER TABLE table MODIFY field1 type1 NOT NULL ...
