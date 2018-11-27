@@ -5,8 +5,6 @@ docker images
 * 获取镜像
 docker pull elasticsearch
 
-
-
 * 运行镜像：
     - docker run -itd <image>
     - docker run -itd -v <local>:<container> <image>
