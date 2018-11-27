@@ -3,6 +3,7 @@
 # 任务场景
 * 撤销未提交的所有修改：
 ```bash
+git checkout <filepath>  #撤销单个未提交的修改
 git checkout .
 ```
 
