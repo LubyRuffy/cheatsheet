@@ -126,6 +126,13 @@ for i in {1..5}; do
     echo "Welcome $i"
 done
 ```
+```
+Welcome 1
+Welcome 2
+Welcome 3
+Welcome 4
+Welcome 5
+```
 也可以指定步长
 ```bash
 for i in {5..50..5}; do
