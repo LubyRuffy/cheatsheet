@@ -25,11 +25,8 @@ echo "You are $(get_name)"
 
 * 条件执行
 ```
-get_name() {
-  echo "John"
-}
-
-echo "You are $(get_name)"
+git commit && git push
+git commit || echo "Commit failed"
 ```
 
 
