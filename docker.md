@@ -94,10 +94,16 @@ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 * 发布到hub.docker.io
 ```
-docker login 确保登陆成功，如果是自己的私有仓库，可以：docker login docker.yousite.com
-
+docker login 确保登陆成功
 docker tag <image> <project>/<image>:lastest
 docker push <project>/<image>:lastest
+
+如果是自己的私有仓库，可以：
+docker login docker.yousite.com
+docker tag <image> docker.yousite.com/<project>/<image>:lastest
+docker push <project>/<image>:lastest
+
+
 
 ```
 
