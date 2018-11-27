@@ -86,6 +86,19 @@ echo {A,B}.js
 ```
 
 ### 文件判断
+```
+[ -e FILE ]	Exists
+[ -r FILE ]	Readable
+[ -h FILE ]	Symlink
+[ -d FILE ]	Directory
+[ -w FILE ]	Writable
+[ -s FILE ]	Size is > 0 bytes
+[ -f FILE ]	File
+[ -x FILE ]	Executable
+[ FILE1 -nt FILE2 ]	1 is more recent than 2
+[ FILE1 -ot FILE2 ]	2 is more recent than 1
+[ FILE1 -ef FILE2 ]	Same files
+```
 
 # 任务场景
 
