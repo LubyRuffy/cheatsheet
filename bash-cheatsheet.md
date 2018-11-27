@@ -167,6 +167,14 @@ result=$(myfunc)
 echo result
 ``` 
 
+### 参数
+```bash
+$#	Number of arguments
+$*	All arguments
+$@	All arguments, starting from first
+$1	First argument
+```
+
 ## 条件判断
 完整参考：http://man7.org/linux/man-pages/man1/test.1.html
 
