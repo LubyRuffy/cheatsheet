@@ -106,13 +106,13 @@ ${FOO/#from/to}	Replace prefix
 
 ### 运算判断
 ```bash
-字符串
+# 字符串
 [ STRING = STRING ]	等于
 [ STRING != STRING ]	不等于
 [ -z STRING ]	空字符
 [ -n STRING ]	非空字符
 
-数字
+# 数字
 [ NUM -eq NUM ]	等于
 [ NUM -ne NUM ]	不等于
 [ NUM -lt NUM ]	小于Less than
@@ -120,7 +120,7 @@ ${FOO/#from/to}	Replace prefix
 [ NUM -gt NUM ]	大于Greater than
 [ NUM -ge NUM ]	大于等于Greater than or equal
 
-其他
+# 其他
 [[ STRING =~ STRING ]]	正则Regexp 需要两个中括号
 (( NUM < NUM ))	Numeric conditions
 [ -o noclobber ]	If OPTIONNAME is enabled
