@@ -8,7 +8,7 @@ CREATE DATABASE `webdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 * 创建帐号：
 ```sql
-grant all privileges on <database>.* to <user>@'%' identified by 'fofaisbest';
+grant all privileges on <database>.* to <user>@'%' identified by '<password>';
 flush privileges;
 ```
 * 修改列的默认值：
