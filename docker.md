@@ -51,8 +51,6 @@ docker start <name>
 docker inspect <name>
 ```
 
-
-
 * 接入运行中的容器：
 ```
 docker attach <name>
