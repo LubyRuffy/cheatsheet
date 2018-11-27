@@ -266,7 +266,7 @@ lines=(`cat "logfile"`)                 # Read from file
 pwd # still in first directory
 ```
 
-### case/switch
+### case
 ```bash
 case "$1" in
   start | up)
