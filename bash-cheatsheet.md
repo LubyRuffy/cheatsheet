@@ -130,7 +130,7 @@ ${FOO/#from/to}	Replace prefix
 ```
 
 ### 文件判断
-```
+```bash
 [ -e FILE ]	文件存在（包含目录和文件）Exists
 [ -r FILE ]	文件可读Readable
 [ -h FILE ]	文件时链接Symlink
