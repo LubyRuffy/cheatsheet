@@ -94,18 +94,8 @@ ${FOO/from/to}	Replace first match
 ${FOO//from/to}	Replace all
 ${FOO/%from/to}	Replace suffix
 ${FOO/#from/to}	Replace prefix
-Comments
-# Single line comment
-: '
-This is a
-multi line
-comment
-'
-Substrings
-${FOO:0:3}	Substring (position, length)
-${FOO:-3:3}	Substring from the right
-Length
 ```
+
 ## 循环
 
 ## 函数
