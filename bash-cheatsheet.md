@@ -43,6 +43,17 @@ elif [ -n "$string" ]; then
 fi
 ```
 
+* 花括号展开
+```bash
+if [ -z "$string" ]; then
+  echo "String is empty"
+elif [ -n "$string" ]; then
+  echo "String is not empty"
+fi
+```
+
+
+
 # 任务场景
 
 # 常见问题
