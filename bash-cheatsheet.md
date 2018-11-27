@@ -61,6 +61,24 @@ echo {A,B}.js
 
 ## 条件
 ### 运算判断
+```
+[ STRING = STRING ]	Equal
+[ STRING != STRING ]	Not Equal
+[ -z STRING ]	Empty string
+[ -n STRING ]	Not empty string
+[ NUM -eq NUM ]	Equal
+[ NUM -ne NUM ]	Not equal
+[ NUM -lt NUM ]	Less than
+[ NUM -le NUM ]	Less than or equal
+[ NUM -gt NUM ]	Greater than
+[ NUM -ge NUM ]	Greater than or equal
+[[ STRING =~ STRING ]]	Regexp
+(( NUM < NUM ))	Numeric conditions
+[ -o noclobber ]	If OPTIONNAME is enabled
+[ ! EXPR ]	Not
+[ X ] && [ Y ]	And
+[ X ] || [ Y ]	Or
+```
 
 ### 文件判断
 
