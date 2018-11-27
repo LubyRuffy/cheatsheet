@@ -71,14 +71,6 @@ docker network ls
 docker network rm <network_id>
 ```
 
-* 查看单个容器网络信息：
-
-* 容器间网络互通：
-通过docker compose来实现，links命令即可
-
-* 容器的内存分配：
-通过docker compose来实现，mem_limit命令即可
-
 * 查看容器的资源占用情况：
 docker stats
 
