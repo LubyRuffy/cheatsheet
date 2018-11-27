@@ -36,5 +36,7 @@ docker ps -a #查看创建的所有容器：
 
 # 任务场景
 * 太占磁盘空间，需要删除
+* 删除所有未命名的镜像：
+ docker images -a | grep '<none>' | awk '{print $3}' | xargs -n 1 docker rmi
 
 # 常见问题
