@@ -20,6 +20,9 @@ var { //批量声明变量，简洁
 
 * for循环
 ```golang
+for i := 7; i <= 9; i++ {
+    fmt.Println(i)
+}
 ```
 
 * defer
