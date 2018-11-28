@@ -509,13 +509,11 @@ func Index(vs []string, t string) int {
     }
     return -1
 }
-
 // Include returns `true` if the target string t is in the
 // slice.
 func Include(vs []string, t string) bool {
     return Index(vs, t) >= 0
 }
-
 // Any returns `true` if one of the strings in the slice
 // satisfies the predicate `f`.
 func Any(vs []string, f func(string) bool) bool {
@@ -526,7 +524,6 @@ func Any(vs []string, f func(string) bool) bool {
     }
     return false
 }
-
 // All returns `true` if all of the strings in the slice
 // satisfy the predicate `f`.
 func All(vs []string, f func(string) bool) bool {
@@ -537,7 +534,6 @@ func All(vs []string, f func(string) bool) bool {
     }
     return true
 }
-
 // Filter returns a new slice containing all strings in the
 // slice that satisfy the predicate `f`.
 func Filter(vs []string, f func(string) bool) []string {
@@ -549,7 +545,6 @@ func Filter(vs []string, f func(string) bool) []string {
     }
     return vsf
 }
-
 // Map returns a new slice containing the results of applying
 // the function `f` to each string in the original slice.
 func Map(vs []string, f func(string) string) []string {
@@ -559,32 +554,21 @@ func Map(vs []string, f func(string) string) []string {
     }
     return vsm
 }
-
 func main() {
-
     // Here we try out our various collection functions.
     var strs = []string{"peach", "apple", "pear", "plum"}
-
-    fmt.Println(Index(strs, "pear"))
-
-    fmt.Println(Include(strs, "grape"))
-
+    fmt.Println(Index(strs, "pear")) //2
+    fmt.Println(Include(strs, "grape")) //false
     fmt.Println(Any(strs, func(v string) bool {
         return strings.HasPrefix(v, "p")
-    }))
-
+    })) //true
     fmt.Println(All(strs, func(v string) bool {
         return strings.HasPrefix(v, "p")
-    }))
-
+    })) //false
     fmt.Println(Filter(strs, func(v string) bool {
         return strings.Contains(v, "e")
-    }))
-
-    // The above examples all used anonymous functions,
-    // but you can also use named functions of the correct
-    // type.
-    fmt.Println(Map(strs, strings.ToUpper))
+    })) //[peach apple pear]
+    fmt.Println(Map(strs, strings.ToUpper)) //[PEACH APPLE PEAR PLUM]
 
 }
 ```
