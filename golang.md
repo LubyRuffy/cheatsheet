@@ -498,6 +498,7 @@ go get golang.org/x/tour #会自动生成tour程序，执行即可
 * goroutines如何控制数量？
 
 * 有没有类似于其他语言中的collection函数？
+
 ```golang
 // Index returns the first index of the target string `t`, or
 // -1 if no match is found.
