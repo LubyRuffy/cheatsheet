@@ -184,6 +184,17 @@ fmt.Println(<-messages)
 ```
 可以用在等待goroutines完成
 ```golang
+func worker(done chan bool) {
+    fmt.Print("working...")
+    time.Sleep(time.Second)
+    fmt.Println("done")
+    done <- true
+}
+func main() {
+    done := make(chan bool, 1)
+    go worker(done)
+    <-done
+}
 ```
 
 ## defer
