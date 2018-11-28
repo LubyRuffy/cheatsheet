@@ -423,7 +423,7 @@ r, _ := regexp.Compile("p([a-z]+)ch")
 fmt.Println(r.MatchString("peach")) //true
 fmt.Println(r.FindString("peach punch")) //peach
 fmt.Println(r.FindStringIndex("peach punch"))
-fmt.Println(r.FindStringSubmatch("peach punch")) //
+fmt.Println(r.FindStringSubmatch("peach punch")) //[peach ea]
 fmt.Println(r.FindStringSubmatchIndex("peach punch")) //[0 5 1 3]
 fmt.Println(r.FindAllString("peach punch pinch", -1)) //[peach punch pinch]
 fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1)) //[[0 5 1 3] [6 11 7 9] [12 17 13 15]]
