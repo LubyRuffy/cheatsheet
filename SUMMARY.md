@@ -10,4 +10,5 @@
 * [Windows批处理](windowspi-chu-li.md)
 * [VIM编辑器](vim.md)
 * [Markdown语法](markdownbian-ji-yu-fa.md)
+* [Golang](golang.md)
 
