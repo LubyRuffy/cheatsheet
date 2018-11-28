@@ -369,9 +369,10 @@ p(then.Weekday())    //Tuesday
 // These methods compare two times, testing if the
 // first occurs before, after, or at the same time
 // as the second, respectively.
-p(then.Before(now))
-p(then.After(now))
-p(then.Equal(now))
+p(then.Before(now))    //true
+p(then.After(now))    //false
+p(then.Equal(now))    //false
+
 // The `Sub` methods returns a `Duration` representing
 // the interval between two times.
 diff := now.Sub(then)
