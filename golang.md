@@ -353,7 +353,7 @@ p(now) //=> 2012-10-31 15:50:13.793654 +0000 UTC
 // with a `Location`, i.e. time zone.
 then := time.Date(
 2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
-p(then)
+p(then) //=> 2009-11-17 20:34:58.651387237 +0000 UTC
 // You can extract the various components of the time
 // value as expected.
 p(then.Year())
