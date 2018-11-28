@@ -261,8 +261,10 @@ case <-time.After(1 * time.Second):
 ```golang
 timer1 := time.NewTimer(2 * time.Second)
 <-timer1.C
-
-
+ticker := time.NewTicker(500 * time.Millisecond)
+for t := range ticker.C {
+    fmt.Println("Tick at", t)
+}
 ```
 ## defer
 
