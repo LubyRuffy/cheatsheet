@@ -189,14 +189,20 @@ fmt.Println("ops:", opsFinal)
 互斥操作：
 ```golang	
 import "sync/atomic"
-var ops uint64
-for i := 0; i < 50; i++ {
-    go func() {
-        atomic.AddUint64(&ops, 1)
-    }
+var mutex = &sync.Mutex{}
+total := 0
+for r := 0; r < 100; r++ {
+	go func() {
+		for {
+			mutex.Lock()
+			total += rand.Intn(5)
+			mutex.Unlock()
+			time.Sleep(time.Millisecond)
+		}
+	}()
 }
-opsFinal := atomic.LoadUint64(&ops)
-fmt.Println("ops:", opsFinal)
+time.Sleep(time.Second)
+fmt.Println(total)
 ```
 
 
