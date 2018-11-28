@@ -40,6 +40,11 @@ git config http.sslVerify "false"
 ```
 对于可信任的自签名的证书最好采用倒入证书为可信的方式，避免引入安全问题。
 
+* 如何导出文件不带git信息？
+```bash
+git archive master | gzip > latest.tgz
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 * git怎么发音？
