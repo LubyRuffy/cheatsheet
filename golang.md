@@ -67,7 +67,7 @@ hex.EncodeToString(data)
 
 * 定时程序
 ```golang
-        ticker := time.NewTicker(time.Second * time.Duration(interval_second) )
+        ticker := time.NewTicker(time.Second * interval_second )
         go func() {
             for t := range ticker.C {
                 log.Println("Tick at", t)
