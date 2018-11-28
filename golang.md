@@ -45,6 +45,7 @@ for k, v := range kvs {
     fmt.Printf("%s -> %s\n", k, v)
 }
 // range遍历channel
+queue := make(chan string, 2)
 for elem := range channel_queue {
 }
 ```
@@ -206,7 +207,13 @@ j, more := <-jobs
 // 在close(jobs)后，more为false
 ```
 
-可以 
+可以通过range遍历：
+```golang
+queue := make(chan string, 2)
+for elem := range channel_queue {
+}
+
+```
 
 ## select消息
 有时有多个channels需要监控，可以统一通过select来完成：
