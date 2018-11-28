@@ -48,5 +48,9 @@ git archive master | gzip > latest.tgz
 # 常见问题
 * clone与fetch的区别在哪？
 
+* fetch与fetch的区别在哪？
+
+
+
 * git怎么发音？
 git读法是/‘gi·tʌb/
