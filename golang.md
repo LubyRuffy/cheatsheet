@@ -256,7 +256,7 @@ case <-time.After(1 * time.Second):
 }
 ```
 
-## timeer和ticker
+## timer和ticker
 都是通过定时返回channel消息，区别在于timer是一次性的，ticker是周期性的。
 
 ## defer
