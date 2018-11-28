@@ -204,6 +204,9 @@ go get golang.org/x/tour #会自动生成tour程序，执行即可
 `go env GOPATH`/bin/tour
 ```
 
+* goroutines如何控制数量？
+
+
 # 常见问题
 
 * array和slice，数组与切片的区别是什么？
