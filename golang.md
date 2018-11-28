@@ -56,6 +56,20 @@ case 2:
 case 3:
     fmt.Println("three")
 }
+// x.(type)的使用
+func MyPrintf(args ...interface{}) {  
+    for _, arg := range args {  
+        switch arg.(type) {  
+            case int:  
+                fmt.Println(arg, "is an int value.")  
+            case string:  
+                fmt.Println(arg, "is a string value.")  
+            default:  
+                fmt.Println(arg, "is an unknown type.")  
+        }  
+    }  
+} 
+
 ```
 
 * defer
@@ -70,18 +84,7 @@ func b() { for i := 0; i < 4; i++ { defer fmt.Print(i) } }
 
 * x.(type)
 ```golang
-func MyPrintf(args ...interface{}) {  
-    for _, arg := range args {  
-        switch arg.(type) {  
-            case int:  
-                fmt.Println(arg, "is an int value.")  
-            case string:  
-                fmt.Println(arg, "is a string value.")  
-            default:  
-                fmt.Println(arg, "is an unknown type.")  
-        }  
-    }  
-} 
+
 ```
 
 
