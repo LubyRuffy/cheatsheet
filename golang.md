@@ -347,7 +347,7 @@ func b() {
 p := fmt.Println
 // We'll start by getting the current time.
 now := time.Now()
-p(now)
+p(now) //=> 2012-10-31 15:50:13.793654 +0000 UTC
 // You can build a `time` struct by providing the
 // year, month, day, etc. Times are always associated
 // with a `Location`, i.e. time zone.
