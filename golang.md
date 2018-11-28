@@ -181,6 +181,8 @@ for i := 0; i < 50; i++ {
         atomic.AddUint64(&ops, 1)
     }
 }
+opsFinal := atomic.LoadUint64(&ops)
+fmt.Println("ops:", opsFinal)
 ```
 
 
