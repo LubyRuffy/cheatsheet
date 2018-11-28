@@ -258,7 +258,12 @@ case <-time.After(1 * time.Second):
 
 ## timer和ticker
 都是通过定时返回channel消息，区别在于timer是一次性的，ticker是周期性的。
+```golang
+timer1 := time.NewTimer(2 * time.Second)
+<-timer1.C
 
+
+```
 ## defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
