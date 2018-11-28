@@ -387,7 +387,7 @@ p(diff.Nanoseconds()) //93208515142266763
 // duration, or with a `-` to move backwards by a
 // duration.
 p(then.Add(diff)) //2012-10-31 15:50:13.793654 +0000 UTC
-p(then.Add(-diff)) //
+p(then.Add(-diff)) //2006-12-05 01:19:43.509120474 +0000 UTC
 ```
 
 # 任务场景
