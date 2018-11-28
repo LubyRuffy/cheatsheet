@@ -120,7 +120,7 @@ go func() {
 * 启动tour演练场
 ```bash
 go get golang.org/x/tour
-gotour
+`go env GOPATH`/bin/tour
 ```
 
 # 常见问题
