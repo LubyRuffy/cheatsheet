@@ -56,7 +56,7 @@ case 2:
 case 3:
     fmt.Println("three")
 }
-// x.(type)的用法使用
+// x.(type)的用法
 func MyPrintf(args ...interface{}) {  
     for _, arg := range args {  
         switch arg.(type) {  
