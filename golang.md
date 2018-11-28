@@ -437,7 +437,7 @@ out := r.ReplaceAllFunc(in, bytes.ToUpper)
 fmt.Println(string(out)) //a PEACH
 ```
 
-### 字符串函数
+### 字符串操作
 ```golang
 match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
 fmt.Println(match) //true
