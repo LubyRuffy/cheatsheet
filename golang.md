@@ -18,6 +18,14 @@ var { //批量声明变量，简洁
     如果不书写 type ,则在编译时会根据value自动推导其类型。
     2. name := value
 
+* if/else
+```golang
+if 7%2 == 0 {
+        fmt.Println("7 is even")
+    } else {
+        fmt.Println("7 is odd")
+    }
+```
 * for循环
 ```golang
 for i := 7; i <= 9; i++ {
