@@ -391,7 +391,7 @@ p(then.Add(-diff)) //2006-12-05 01:19:43.509120474 +0000 UTC
 ```
 ### 固定格式
 ```golang
-fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
+fmt.Println(time.Now().Format("2006-01-02 15:04:05")) #=> 2009-11-10 23:00:00
 ```
 预定义的一些格式如下：
 ```golang
