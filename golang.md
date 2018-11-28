@@ -69,7 +69,6 @@ func MyPrintf(args ...interface{}) {
         }  
     }  
 } 
-
 ```
 
 * defer
