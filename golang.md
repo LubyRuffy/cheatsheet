@@ -26,6 +26,7 @@ if 7%2 == 0 {
     fmt.Println("7 is odd")
 }
 ```
+
 * for循环
 ```golang
 for i := 7; i <= 9; i++ {
@@ -42,6 +43,18 @@ for _, num := range nums {
 kvs := map[string]string{"a": "apple", "b": "banana"}
 for k, v := range kvs {
     fmt.Printf("%s -> %s\n", k, v)
+}
+```
+
+* switch
+```golang
+switch i {
+case 1:
+    fmt.Println("one")
+case 2:
+    fmt.Println("two")
+case 3:
+    fmt.Println("three")
 }
 ```
 
