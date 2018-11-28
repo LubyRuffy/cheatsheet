@@ -120,6 +120,6 @@ go func() {
 
 * array和slice，数组与切片的区别是什么？
 ```golang
-var a1 []int ---> 无长度定义，是Slice
-var a2 [2]int ---> 有长度定义，是Array
+var a1 []int //无长度定义，是Slice
+var a2 [2]int //有长度定义，是Array
 ```
