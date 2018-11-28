@@ -386,8 +386,8 @@ p(diff.Nanoseconds()) //93208515142266763
 // You can use `Add` to advance a time by a given
 // duration, or with a `-` to move backwards by a
 // duration.
-p(then.Add(diff))
-p(then.Add(-diff))
+p(then.Add(diff)) //2012-10-31 15:50:13.793654 +0000 UTC
+p(then.Add(-diff)) //
 ```
 
 # 任务场景
