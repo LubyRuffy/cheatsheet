@@ -186,7 +186,7 @@ for i := 0; i < 50; i++ {
 opsFinal := atomic.LoadUint64(&ops)
 fmt.Println("ops:", opsFinal)
 ```
-
+互斥操作：
 ```golang	
 import "sync/atomic"
 var ops uint64
