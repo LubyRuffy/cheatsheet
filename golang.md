@@ -430,7 +430,7 @@ fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1))
 fmt.Println(r.FindAllString("peach punch pinch", 2))
 fmt.Println(r.Match([]byte("peach")))
 r = regexp.MustCompile("p([a-z]+)ch")
-fmt.Println(r)
+fmt.Println(r)  //p([a-z]+)ch
 fmt.Println(r.ReplaceAllString("a peach", "<fruit>")) //a <fruit>
 in := []byte("a peach")
 out := r.ReplaceAllFunc(in, bytes.ToUpper) 
