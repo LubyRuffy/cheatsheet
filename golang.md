@@ -173,6 +173,17 @@ go func(msg string) {
 
 ### 同步的方式
 * channel
+```golang	
+import "sync/atomic"
+var ops uint64
+for i := 0; i < 50; i++ {
+    go func() {
+        atomic.AddUint64(&ops, 1)
+    }
+}
+```
+
+
 * sync库
 
 
