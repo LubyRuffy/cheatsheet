@@ -229,6 +229,15 @@ default:
 }
 ```
 
+可以利用select来解决超时问题：
+```golang
+select {
+case res := <-c1:
+    fmt.Println(res)
+case <-time.After(1 * time.Second):
+    fmt.Println("timeout 1")
+}
+```
 
 ## defer
 
