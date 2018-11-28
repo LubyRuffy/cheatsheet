@@ -156,6 +156,7 @@ func measure(g geometry) {  //参数类型为接口类型
 
 ## Goroutines
 简单粗暴的理解类似于线程
+
 ```golang	
 func f(from string) {
 }
