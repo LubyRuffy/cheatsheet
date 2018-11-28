@@ -28,6 +28,8 @@ for {
 }
 // range遍历
 nums := []int{2, 3, 4}
+for _, num := range nums {
+」
 ```
 
 * defer
