@@ -66,7 +66,6 @@ hex.EncodeToString(data)
 ```
 
 * 定时程序
-＊定时程序
 ```golang
         ticker := time.NewTicker(time.Second * time.Duration(interval_second) )
         go func() {
