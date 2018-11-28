@@ -229,7 +229,7 @@ default:
 }
 ```
 
-可以利用select来解决超时问题：
+可以利用select来解决超时跟踪：
 ```golang
 select {
 case res := <-c1:
