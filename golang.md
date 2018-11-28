@@ -2,8 +2,22 @@
 
 * 变量
 ```golang
-
+var a int //声明一个int类型的变量
+var b struct { //声明一个结构体
+    name string
+}
+var a = 8 //声明变量的同时赋值，编译器自动推导其数据类型
+var a int = 8 //声明变量的同时赋值
+var { //批量声明变量，简洁
+    a int
+    b string
+}
 ```
+我们看到有此两种方式：
+1. var name [type] = value
+如果不书写 type ,则在编译时会根据value自动推导其类型。
+2. name := value
+
 
 * defer
     
