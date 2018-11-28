@@ -454,8 +454,8 @@ p("Split:     ", s.Split("a-b-c-d-e", "-")) //[a b c d e]
 p("ToLower:   ", s.ToLower("TEST")) //test
 p("ToUpper:   ", s.ToUpper("test")) //TEST
 p()
-p("Len: ", len("hello"))
-p("Char:", "hello"[1])
+p("Len: ", len("hello")) // 5
+p("Char:", "hello"[1]) // 101
 ```
 
 
