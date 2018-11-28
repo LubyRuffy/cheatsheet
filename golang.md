@@ -58,7 +58,7 @@ case 3:
 }
 // x.(type)的用法
 func MyPrintf(args ...interface{}) {  
-    for _, arg := range args {  
+    for _, arg := range args {
         switch arg.(type) {  
             case int:  
                 fmt.Println(arg, "is an int value.")  
