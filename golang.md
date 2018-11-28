@@ -57,6 +57,7 @@ type HookFunction func(ip string) bool
 
 * 如何拼接路径："path/filepath” : filepath.Join("a", "b", "c”)   
 * 如何获取当前工作目录：os.Getwd
-
+* 字符串如何转换为hex形式？“encoding/hex”
+hex.EncodeToString(data)
 
 # 常见问题
