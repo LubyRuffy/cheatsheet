@@ -72,7 +72,7 @@ switch i.(type) {
 var a [5]int //存在默认值
 a := [5]int{1, 2, 3, 4, 5}
 var twoD [2][3]int
-//slice与array最大的区别在于：动态增加数据长度只能是slice
+//slice与array最大的区别在于：动态增加数据长度只能是slice；也就是说array是固定的数据，slice是可动态扩展的数据
 var a []int
 a = append(a, 1)
 ```
