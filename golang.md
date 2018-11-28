@@ -589,6 +589,9 @@ fmt.Println("awaiting signal")
 fmt.Println("exiting")
 ```
 
+* 如何调用外部程序并且实时获取输出？
+
+
 # 常见问题
 
 * array和slice，数组与切片的区别是什么？
