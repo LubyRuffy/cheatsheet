@@ -48,7 +48,7 @@ git archive master | gzip > latest.tgz
 # 常见问题
 * clone与fetch的区别在哪？
 
-* fetch与fetch的区别在哪？
+* fetch与pull的区别在哪？
 
 
 
