@@ -21,10 +21,10 @@ var { //批量声明变量，简洁
 * if/else
 ```golang
 if 7%2 == 0 {
-        fmt.Println("7 is even")
-    } else {
-        fmt.Println("7 is odd")
-    }
+    fmt.Println("7 is even")
+} else {
+    fmt.Println("7 is odd")
+}
 ```
 * for循环
 ```golang
