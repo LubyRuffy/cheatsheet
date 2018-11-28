@@ -574,6 +574,16 @@ func main() {
 }
 ```
 
+* 如何处理信号？
+```golang
+sigs := make(chan os.Signal, 1)
+signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+go func() {
+    sig := <-sigs
+    fmt.Println(sig)
+    done <- true
+}()
+```
 
 # 常见问题
 
