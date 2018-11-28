@@ -44,6 +44,9 @@ kvs := map[string]string{"a": "apple", "b": "banana"}
 for k, v := range kvs {
     fmt.Printf("%s -> %s\n", k, v)
 }
+// range遍历channel
+for elem := range queue {
+}
 ```
 
 ## switch
@@ -196,11 +199,14 @@ func main() {
     <-done
 }
 ```
+
 close可以让channel的接收方得到通知。
 ```golang
 j, more := <-jobs
 // 在close(jobs)后，more为false
 ```
+
+可以 
 
 ## select消息
 有时有多个channels需要监控，可以统一通过select来完成：
