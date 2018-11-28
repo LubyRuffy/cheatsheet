@@ -379,10 +379,10 @@ diff := now.Sub(then)
 p(diff) //25891h15m15.142266763s
 // We can compute the length of the duration in
 // various units.
-p(diff.Hours())
-p(diff.Minutes())
-p(diff.Seconds())
-p(diff.Nanoseconds())
+p(diff.Hours()) //25891.25420618521
+p(diff.Minutes()) //1.5534752523711128e+06
+p(diff.Seconds()) //25891.25420618521
+p(diff.Nanoseconds()) //
 // You can use `Add` to advance a time by a given
 // duration, or with a `-` to move backwards by a
 // duration.
