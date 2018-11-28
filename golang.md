@@ -204,7 +204,7 @@ func main() {
 close可以让channel的接收方得到通知。
 ```golang
 j, more := <-jobs
-// 在close(jobs)后，more为false
+// 在close(jobs)后且消息都已经处理完，more为false
 ```
 
 可以通过range遍历：
