@@ -108,12 +108,12 @@ hex.EncodeToString(data)
 
 * 定时程序
 ```golang
-        ticker := time.NewTicker(time.Second * interval_second )
-        go func() {
-            for t := range ticker.C {
-                log.Println("Tick at", t)
-            }
-        }()
+ticker := time.NewTicker(time.Second * interval_second )
+go func() {
+    for t := range ticker.C {
+        log.Println("Tick at", t)
+    }
+}()
 ```
 
 # 常见问题
