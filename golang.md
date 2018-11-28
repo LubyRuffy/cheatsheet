@@ -439,24 +439,23 @@ fmt.Println(string(out)) //a PEACH
 
 ### 字符串操作
 ```golang
-match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
-fmt.Println(match) //true
-r, _ := regexp.Compile("p([a-z]+)ch")
-fmt.Println(r.MatchString("peach")) //true
-fmt.Println(r.FindString("peach punch")) //peach
-fmt.Println(r.FindStringIndex("peach punch")) //[0 5]
-fmt.Println(r.FindStringSubmatch("peach punch")) //[peach ea]
-fmt.Println(r.FindStringSubmatchIndex("peach punch")) //[0 5 1 3]
-fmt.Println(r.FindAllString("peach punch pinch", -1)) //[peach punch pinch]
-fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1)) //[[0 5 1 3] [6 11 7 9] [12 17 13 15]]
-fmt.Println(r.FindAllString("peach punch pinch", 2)) //[peach punch]
-fmt.Println(r.Match([]byte("peach"))) //true
-r = regexp.MustCompile("p([a-z]+)ch")
-fmt.Println(r)  //p([a-z]+)ch
-fmt.Println(r.ReplaceAllString("a peach", "<fruit>")) //a <fruit>
-in := []byte("a peach")
-out := r.ReplaceAllFunc(in, bytes.ToUpper) 
-fmt.Println(string(out)) //a PEACH
+import s "strings"
+var p = fmt.Println
+p("Contains:  ", s.Contains("test", "es")) // true
+p("Count:     ", s.Count("test", "t")) //2
+p("HasPrefix: ", s.HasPrefix("test", "te")) //true
+p("HasSuffix: ", s.HasSuffix("test", "st")) //true
+p("Index:     ", s.Index("test", "e")) //1
+p("Join:      ", s.Join([]string{"a", "b"}, "-")) //a-b
+p("Repeat:    ", s.Repeat("a", 5))
+p("Replace:   ", s.Replace("foo", "o", "0", -1))
+p("Replace:   ", s.Replace("foo", "o", "0", 1))
+p("Split:     ", s.Split("a-b-c-d-e", "-"))
+p("ToLower:   ", s.ToLower("TEST"))
+p("ToUpper:   ", s.ToUpper("test"))
+p()
+p("Len: ", len("hello"))
+p("Char:", "hello"[1])
 ```
 
 
