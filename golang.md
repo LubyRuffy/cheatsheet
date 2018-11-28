@@ -362,8 +362,8 @@ p(then.Day())    //17
 p(then.Hour())    //20
 p(then.Minute())    //34
 p(then.Second())    //58
-p(then.Nanosecond())
-p(then.Location())
+p(then.Nanosecond())    //651387237
+p(then.Location()) //UTC
 // The Monday-Sunday `Weekday` is also available.
 p(then.Weekday())
 // These methods compare two times, testing if the
