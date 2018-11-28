@@ -183,6 +183,8 @@ fmt.Println(<-messages)
 fmt.Println(<-messages)
 ```
 可以用在等待goroutines完成
+```golang
+```
 
 ## defer
 
