@@ -81,11 +81,6 @@ func b() { for i := 0; i < 4; i++ { defer fmt.Print(i) } }
 ```
 我们可以看到依次输出了3210
 
-* x.(type)
-```golang
-
-```
-
 
 # 任务场景
 * 定义回调函数
