@@ -68,17 +68,11 @@ switch i.(type) {
 ```
 
 * array数组和slices切片
-
-
-
 ```golang
 var a [5]int //存在默认值
 a := [5]int{1, 2, 3, 4, 5}
 var twoD [2][3]int
 ```
-
-* 
-
 
 * defer
 
