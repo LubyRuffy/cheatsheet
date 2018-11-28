@@ -117,8 +117,9 @@ go func() {
 ```
 
 * 启动tour演练场
-```golang
-aaa
+```bash
+go get golang.org/x/tour
+gotour
 ```
 
 # 常见问题
