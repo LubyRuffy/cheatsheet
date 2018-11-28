@@ -42,3 +42,4 @@ git config http.sslVerify "false"
 
 # 常见问题
 * clone与fetch的区别在哪？
+* git怎么发音？
