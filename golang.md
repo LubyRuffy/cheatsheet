@@ -159,6 +159,7 @@ func measure(g geometry) {  //参数类型为接口类型
 ```golang	
 func f(from string) {
 }
+go f("goroutine")
 ```
 
 ## defer
