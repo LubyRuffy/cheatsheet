@@ -376,7 +376,7 @@ p(then.Equal(now))    //false
 // The `Sub` methods returns a `Duration` representing
 // the interval between two times.
 diff := now.Sub(then)
-p(diff)
+p(diff) //25891h15m15.142266763s
 // We can compute the length of the duration in
 // various units.
 p(diff.Hours())
