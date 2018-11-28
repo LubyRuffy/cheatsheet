@@ -71,6 +71,7 @@ switch i.(type) {
 ```golang
 var a [5]int
 a := [5]int{1, 2, 3, 4, 5}
+var twoD [2][3]int
 ```
 * defer
 
