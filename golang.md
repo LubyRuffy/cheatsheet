@@ -196,6 +196,7 @@ func main() {
     <-done
 }
 ```
+close可以让channel的接收方
 
 ## select消息
 有时有多个channels需要监控，可以统一通过select来完成：
