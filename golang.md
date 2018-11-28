@@ -599,6 +599,7 @@ numbPtr := flag.Int("numb", 42, "an int")
 boolPtr := flag.Bool("fork", false, "a bool")
 var svar string
 flag.StringVar(&svar, "svar", "bar", "a string var")
+flag.Parse()
 ```
 
 
