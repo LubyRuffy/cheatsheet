@@ -212,7 +212,6 @@ j, more := <-jobs
 queue := make(chan string, 2)
 for elem := range channel_queue {
 }
-
 ```
 
 ## select消息
