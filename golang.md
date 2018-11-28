@@ -56,7 +56,7 @@ case 2:
 case 3:
     fmt.Println("three")
 }
-// x.(type)的用法
+// x.(type)的用法，只在switch配合使用
 switch i.(type) {  
     case int:  
         fmt.Println(arg, "is an int value.")  
