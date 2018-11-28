@@ -53,4 +53,8 @@ func MyPrintf(args ...interface{}) {
 type HookFunction func(ip string) bool
 ```
 
+* 获取当前文件路径：os.Args[0]
+
+
+
 # 常见问题
