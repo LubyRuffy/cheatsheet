@@ -382,7 +382,7 @@ p(diff) //25891h15m15.142266763s
 p(diff.Hours()) //25891.25420618521
 p(diff.Minutes()) //1.5534752523711128e+06
 p(diff.Seconds()) //9.320851514226677e+07
-p(diff.Nanoseconds()) //
+p(diff.Nanoseconds()) //93208515142266763
 // You can use `Add` to advance a time by a given
 // duration, or with a `-` to move backwards by a
 // duration.
