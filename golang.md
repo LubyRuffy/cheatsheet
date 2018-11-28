@@ -1,6 +1,6 @@
 # 基础知识
 
-* 变量
+## 变量
 ```golang
 var a int //声明一个int类型的变量
 var b struct { //声明一个结构体
@@ -18,7 +18,7 @@ var { //批量声明变量，简洁
     如果不书写 type ,则在编译时会根据value自动推导其类型。
     2. name := value
 
-* if/else
+## if/else
 ```golang
 if 7%2 == 0 {
     fmt.Println("7 is even")
@@ -27,7 +27,7 @@ if 7%2 == 0 {
 }
 ```
 
-* for循环
+## for循环
 ```golang
 for i := 7; i <= 9; i++ {
     fmt.Println(i)
@@ -46,7 +46,7 @@ for k, v := range kvs {
 }
 ```
 
-* switch
+## switch
 ```golang
 switch i {
 case 1:
@@ -67,7 +67,7 @@ switch i.(type) {
 }
 ```
 
-* array数组和slices切片
+## array数组和slices切片
 ```golang
 var a [5]int //存在默认值
 a := [5]int{1, 2, 3, 4, 5}
@@ -83,7 +83,7 @@ m := make(map[string]int)
 n := map[string]int{"foo": 1, "bar": 2}
 ```
 
-* func函数
+## func函数
 ```golang
 func plus(a int, b int) int {
 }
@@ -101,7 +101,7 @@ nums := []int{1, 2, 3, 4}
 sum(nums...) //通过...三个点进行展开
 ```
 
-* Closures闭包
+## Closures闭包
 ```golang
 func intSeq() func() int {
     i := 0
@@ -112,11 +112,11 @@ func intSeq() func() int {
 }
 ```
 
-* 指针
+## 指针
 
 跟C一样，通过*表示，通过&取值的指针。
 
-* 结构
+## 结构
 ```golang
 type person struct {
     name string
@@ -133,7 +133,7 @@ a:=person{"Bob", 20}
 fmt.Println(a.myage())
 ```
 
-* 接口Interface
+## 接口Interface
 
 类似于C++里面的虚类：
 ```golang
@@ -154,7 +154,7 @@ func measure(g geometry) {  //参数类型为接口类型
 }
 ```
 
-* defer
+## defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
 defer 还有一个重要的特性，就是即便函数抛出了异常，也会被执行的。 这样就不会因程序出现了错误，而导致资源不会释放了。
