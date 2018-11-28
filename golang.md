@@ -59,7 +59,7 @@ type HookFunction func(ip string) bool
 * 如何获取当前工作目录：os.Getwd
 * 字符串如何转换为hex形式？
 ```golang
-import encoding/hex"
+import "encoding/hex"
 hex.EncodeToString(data)
 ```
 
