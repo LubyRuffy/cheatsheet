@@ -171,6 +171,11 @@ go func(msg string) {
 }("going")
 ```
 
+### 同步的方式
+* channel
+* sync库
+
+
 ## Channels
 ```golang
 messages := make(chan string)
