@@ -219,6 +219,16 @@ for i := 0; i < 2; i++ {
 }
 ```
 
+上面是阻塞模式，可以增加default进行非阻塞模式：
+```golang
+select {
+case messages <- msg:
+    fmt.Println("sent message", msg)
+default:
+    fmt.Println("no message sent")
+}
+```
+
 
 ## defer
 
