@@ -4,7 +4,7 @@
 * 定义回调函数
 
 ```golang
-aaa
+type HookFunction func(ip string) bool
 ```
 
 # 常见问题
