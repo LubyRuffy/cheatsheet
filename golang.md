@@ -74,6 +74,8 @@ a := [5]int{1, 2, 3, 4, 5}
 var twoD [2][3]int
 ```
 
+* slices切片
+
 * defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
