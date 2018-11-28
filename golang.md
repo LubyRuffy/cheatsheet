@@ -174,6 +174,7 @@ go func() { messages <- "ping" }()
 msg := <-messages
 fmt.Println(msg)
 ```
+没有指定
 
 ## defer
 
