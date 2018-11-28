@@ -356,9 +356,9 @@ then := time.Date(
 p(then) //=> 2009-11-17 20:34:58.651387237 +0000 UTC
 // You can extract the various components of the time
 // value as expected.
-p(then.Year())
-p(then.Month())
-p(then.Day())
+p(then.Year()) //2009
+p(then.Month()) //November
+p(then.Day())    //17
 p(then.Hour())
 p(then.Minute())
 p(then.Second())
