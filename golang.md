@@ -197,6 +197,27 @@ func main() {
 }
 ```
 
+## select消息
+有时有多个channels需要监控，可以统一通过select来完成：
+
+```golang
+go func() {
+    time.Sleep(1 * time.Second)
+    c1 <- "one"
+}()
+go func() {
+    time.Sleep(2 * time.Second)
+    c2 <- "two"
+}()
+for i := 0; i < 2; i++ {
+    select {
+    case msg1 := <-c1:
+        fmt.Println("received", msg1)
+    case msg2 := <-c2:
+        fmt.Println("received", msg2)
+    }
+}
+```
 ## defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
