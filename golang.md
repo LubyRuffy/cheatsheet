@@ -14,9 +14,9 @@ var { //批量声明变量，简洁
 }
 ```
 我们看到有此两种方式：
-1. var name [type] = value
-如果不书写 type ,则在编译时会根据value自动推导其类型。
-2. name := value
+    1. var name [type] = value
+    如果不书写 type ,则在编译时会根据value自动推导其类型。
+    2. name := value
 
 
 * defer
