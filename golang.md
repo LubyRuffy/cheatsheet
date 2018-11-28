@@ -173,6 +173,7 @@ go func(msg string) {
 
 ### 同步的方式
 * channel
+* sync库
 ```golang	
 import "sync/atomic"
 var ops uint64
@@ -186,7 +187,6 @@ fmt.Println("ops:", opsFinal)
 ```
 
 
-* sync库
 
 
 ## Channels
