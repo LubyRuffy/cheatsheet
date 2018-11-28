@@ -70,7 +70,7 @@ switch i.(type) {
 * array数组
 ```golang
 var a [5]int
-
+a := [5]int{1, 2, 3, 4, 5}
 ```
 * defer
 
