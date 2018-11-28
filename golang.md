@@ -359,9 +359,9 @@ p(then) //=> 2009-11-17 20:34:58.651387237 +0000 UTC
 p(then.Year()) //2009
 p(then.Month()) //November
 p(then.Day())    //17
-p(then.Hour())
-p(then.Minute())
-p(then.Second())
+p(then.Hour())    //20
+p(then.Minute())    //34
+p(then.Second())    //58
 p(then.Nanosecond())
 p(then.Location())
 // The Monday-Sunday `Weekday` is also available.
