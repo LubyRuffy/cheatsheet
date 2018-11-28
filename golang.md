@@ -206,10 +206,6 @@ fmt.Println(total)
 ```
 
 
-
-
-
-
 ## Channels
 ```golang
 messages := make(chan string)
