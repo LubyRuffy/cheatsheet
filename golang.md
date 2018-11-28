@@ -116,6 +116,6 @@ hex.EncodeToString(data)
         }()
 ```
 
-
-
 # 常见问题
+
+* array和slice，数组与切片的区别是什么？
