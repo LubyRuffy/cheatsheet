@@ -26,7 +26,7 @@ for i := 7; i <= 9; i++ {
 // 死循环
 for {
 }
-// range便利
+// range遍历
 nums := []int{2, 3, 4}
 ```
 
