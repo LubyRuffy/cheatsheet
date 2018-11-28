@@ -127,6 +127,7 @@ go func() {
 数组是值类型，把一个数组赋予给另一个数组时是发生值拷贝，而切片是指针类型，拷贝的是指针。
 ```golang
 var a1 []int //无长度定义，是Slice
-var a2 [2]int //有长度定义，是Array
-
+var a2 [5]int //无长度定义，是Slice
+fmt.Println(a1, len(a1), cap(a1))
+fmt.Println(a2, len(a2), cap(a2))
 ```
