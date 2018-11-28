@@ -174,7 +174,14 @@ go func() { messages <- "ping" }()
 msg := <-messages
 fmt.Println(msg)
 ```
-没有指定
+没有指定buffer的话，会死锁等到有消息可读。
+```golang
+messages := make(chan string, 2)
+messages <- "buffered"
+messages <- "channel"
+fmt.Println(<-messages)
+fmt.Println(<-messages)
+```
 
 ## defer
 
