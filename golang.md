@@ -57,14 +57,14 @@ case 3:
     fmt.Println("three")
 }
 // x.(type)的用法，只在switch配合使用
-switch i.(type) {  
-    case int:  
-        fmt.Println(arg, "is an int value.")  
-    case string:  
-        fmt.Println(arg, "is a string value.")  
-    default:  
-        fmt.Println(arg, "is an unknown type.")  
-}  
+switch i.(type) {
+    case int:
+        fmt.Println(arg, "is an int value.")
+    case string:
+        fmt.Println(arg, "is a string value.")
+    default:
+        fmt.Println(arg, "is an unknown type.")
+}
 ```
 
 * array数组和slices切片
@@ -83,13 +83,88 @@ m := make(map[string]int)
 n := map[string]int{"foo": 1, "bar": 2}
 ```
 
+* func函数
+```golang
+func plus(a int, b int) int {
+}
+//如果类型一致，可以一起定义
+func plusPlus(a, b, c int) int {
+}
+//多个返回值
+func vals() (int, int) {
+    return 3, 7
+}
+//可变参函数Variadic
+func sum(nums ...int) {
+}
+nums := []int{1, 2, 3, 4}
+sum(nums...) //通过...三个点进行展开
+```
+
+* Closures闭包
+```golang
+func intSeq() func() int {
+    i := 0
+    return func() int {
+        i++
+        return i
+    }
+}
+```
+
+* 指针
+
+跟C一样，通过*表示，通过&取值的指针。
+
+* 结构
+```golang
+type person struct {
+    name string
+    age  int
+}
+person{"Bob", 20}
+person{name: "Alice", age: 30}
+//可以直接给结构定义方法methods
+func (p *person) myage() int {
+    return p.age
+}
+//直接调用
+a:=person{"Bob", 20}
+fmt.Println(a.myage())
+```
+
+* 接口Interface
+
+类似于C++里面的虚类：
+```golang
+type geometry interface {
+    area() float64
+}
+type circle struct {
+    radius float64
+}
+func (r rect) area() float64 {
+    return r.width * r.height
+}
+func (c circle) area() float64 {
+    return math.Pi * c.radius * c.radius
+}
+func measure(g geometry) {  //参数类型为接口类型
+    fmt.Println(g.area())
+}
+```
+
 * defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
 defer 还有一个重要的特性，就是即便函数抛出了异常，也会被执行的。 这样就不会因程序出现了错误，而导致资源不会释放了。
 defer执行顺序为先进后出:
 ```golang
-func b() { for i := 0; i < 4; i++ { defer fmt.Print(i) } }
+func b() {
+    for i := 0; i < 4; i++ {
+        defer fmt.Print(i)
+    }
+}
 ```
 我们可以看到依次输出了3210
 
@@ -103,8 +178,8 @@ type HookFunction func(ip string) bool
 
 * 获取当前文件路径：os.Args[0]
 
-* 如何拼接路径："path/filepath” : filepath.Join("a", "b", "c”)  
- 
+* 如何拼接路径："path/filepath” : filepath.Join("a", "b", "c”)
+
 * 如何获取当前工作目录：os.Getwd
 
 * 字符串如何转换为hex形式？
