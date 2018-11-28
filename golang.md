@@ -45,7 +45,7 @@ for k, v := range kvs {
     fmt.Printf("%s -> %s\n", k, v)
 }
 // range遍历channel
-for elem := range queue {
+for elem := range channel_queue {
 }
 ```
 
