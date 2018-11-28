@@ -365,7 +365,7 @@ p(then.Second())    //58
 p(then.Nanosecond())    //651387237
 p(then.Location()) //UTC
 // The Monday-Sunday `Weekday` is also available.
-p(then.Weekday())
+p(then.Weekday())    //Tuesday
 // These methods compare two times, testing if the
 // first occurs before, after, or at the same time
 // as the second, respectively.
