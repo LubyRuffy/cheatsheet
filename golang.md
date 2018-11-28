@@ -174,7 +174,7 @@ go func(msg string) {
 ### 同步的方式
 * channel
 * sync库
-原子操作
+原子操作：
 ```golang	
 import "sync/atomic"
 var ops uint64
