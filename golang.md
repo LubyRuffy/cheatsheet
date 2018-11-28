@@ -591,6 +591,16 @@ fmt.Println("exiting")
 
 * 如何调用外部程序并且实时获取输出？
 
+* 如何解析命令行参数？
+```golang
+import "flag"
+wordPtr := flag.String("word", "foo", "a string")
+numbPtr := flag.Int("numb", 42, "an int")
+boolPtr := flag.Bool("fork", false, "a bool")
+var svar string
+flag.StringVar(&svar, "svar", "bar", "a string var")
+```
+
 
 # 常见问题
 
