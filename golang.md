@@ -154,6 +154,11 @@ func measure(g geometry) {  //参数类型为接口类型
 }
 ```
 
+## Goroutines
+简单粗暴的理解类似于线程
+```golang
+```
+
 ## defer
 
 defer 在声明时不会立即执行，而是在函数 return 后，再按照 FILO （先进后出）的原则依次执行每一个 defer。defer一般用于异常处理、释放资源、清理数据、记录日志等。
