@@ -49,9 +49,7 @@ git archive master | gzip > latest.tgz
 * clone与fetch的区别在哪？
 
 * fetch与pull的区别在哪？
-The short definition is:
-Fetch: Download (new) objects and a head from another repository.
-Pull: Fetch (as defined above), and then merge what was downloaded with the current development.
+pull相当于fetch+merge。
 
 
 * git怎么发音？
