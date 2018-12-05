@@ -81,7 +81,7 @@ var a []int 也可以
 a = append(a, 1)
 ```
 
-* map
+## map
 ```golang
 m := make(map[string]int)
 n := map[string]int{"foo": 1, "bar": 2}
