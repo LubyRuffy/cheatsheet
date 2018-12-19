@@ -604,7 +604,7 @@ flag.Parse()
 
 * 跨平台编译
 ```bash
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 ```
 
 # 常见问题
