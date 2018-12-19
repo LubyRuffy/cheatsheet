@@ -602,6 +602,7 @@ flag.StringVar(&svar, "svar", "bar", "a string var")
 flag.Parse()
 ```
 
+* 跨平台编译
 
 # 常见问题
 
