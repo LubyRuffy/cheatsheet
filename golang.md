@@ -641,6 +641,14 @@ windows	386
 windows	amd64
 
 * []byte切换行
+```golang
+bytesReader := bytes.NewReader(b)
+bufReader := bufio.NewReader(bytesReader)
+for true {
+    line, _, error := bufReader.ReadLine()
+    if error != nil {break}
+}
+```
 
 # 常见问题
 
