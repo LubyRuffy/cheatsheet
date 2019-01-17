@@ -339,6 +339,23 @@ python hello.py < foo.txt # 读取内容
   echo $((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256))
   ```
 
+* 根据文件路径列表，返回第一个存在的文件
+```bash
+filearray=("./myfile" "./dir1/myfile" "./dir2/myfile")
+for mfile in "${filearray[@]}"; do
+    if [[ -e $mfile ]]
+    then
+        # do what you want
+        break
+    fi
+done
+```
+
+* 根据时间生成文件名
+```bash
+file=myfile_$(date +"%Y%m%d%H%M%S")
+# => myfile_20190117121316
+```
 
 
 # 常见问题
