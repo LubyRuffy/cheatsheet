@@ -458,7 +458,23 @@ p("Len: ", len("hello")) // 5
 p("Char:", "hello"[1]) // 101
 ```
 
+### 测试
+假如代码文件名称为a.go，内有函数xxx，新建a_test.go文件。定义代码格式
+```golang
+func Testxxx(test *testing.T) {
+    // do xxx()
+    test.Error(...)
+}
+```
+功能测试以Test开头，性能测试以Benchmark开头。
 
+```bash
+go test # 执行所有测试
+go test -v # 看到进度，以及test.Log打印的输出
+go test -cover # 查看测试覆盖度
+go test -test.bench a_test.go # 性能测试
+go test -run="Testxxx" # 测试单个方法
+```
 
 # 任务场景
 * 定义回调函数
