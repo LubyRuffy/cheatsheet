@@ -474,6 +474,7 @@ go test -v # 看到进度，以及test.Log打印的输出
 go test -cover # 查看测试覆盖度
 go test -test.bench a_test.go # 性能测试
 go test -run="Testxxx" # 测试单个方法
+go test -v -coverprofile=cover.out && go tool cover -html=cover.out -o coverage.html  # 生成测试覆盖度可视化网页
 ```
 
 # 任务场景
