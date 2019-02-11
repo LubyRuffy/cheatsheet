@@ -53,6 +53,11 @@ git add <files>
 git commit -m "<Brief description of this commit>"
 ```
 
+* 如何只查看某个目录下的branch不同？
+```bash
+git diff <branch1> <branch2> -- ./testdir
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
