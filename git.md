@@ -45,6 +45,14 @@ git config http.sslVerify "false"
 git archive master | gzip > latest.tgz
 ```
 
+* 如何将当前的修改提交位新的分支？
+有时候你在master分支进行了代码修改，但是不想提交到master，就可以这么做：
+```bash
+git checkout -b newbranch
+git add <files>
+git commit -m "<Brief description of this commit>"
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
