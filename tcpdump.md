@@ -49,7 +49,10 @@ Accept-Encoding: gzip, deflate
 Connection: keep-alive
 ```
 
-
+## 查看网口
+```bash
+$ tcpdump -D
+```
 
 ## 抓取syn报文
 ```bash
