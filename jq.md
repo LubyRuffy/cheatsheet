@@ -2,9 +2,9 @@
 
 * 格式化展示
 ```bash
-echo -ne '{"a":1, "b":2}' | jq
+$ echo -ne '{"a":1, "b":2}' | jq
 # 相当于
-echo -ne '{"a":1, "b":2}' | jq '.'
+$ echo -ne '{"a":1, "b":2}' | jq '.'
 ```
 ```json
 {
