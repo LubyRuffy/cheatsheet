@@ -1,6 +1,10 @@
 # 基础知识
+tcpdump完成抓包工作，基础命令为
+```text
+tcpdump [options] [expression]
+```
 
-## 表达式
+## 表达式expression
 * host
 源或者目标
 ```
