@@ -6,22 +6,15 @@ tcpdump [options] [expression]
 
 ## 表达式expression
 
-### 协议如：
-- ip
-- tcp
-- icmp
-- udp
-- ...
+tcpdump的表达式由一个或多个"单元"组成，每个单元一般包含ID的修饰符和一个ID(数字或名称)。有三种修饰符：
 
-### 方向
-- src
-- dst
-
-### 内容
-* host
-* net
-* port
-* portrange
+1. type：指定ID的类型。
+可以给定的值有host/net/port/portrange。例如"host foo"，"net 128.3"，"port 20"，"portrange 6000-6008"。默认的type为host。
+2. dir：指定ID的方向。
+可以给定的值包括src/dst/src or dst/src and dst，默认为src or dst。例如，"src foo"表示源主机为foo的数据包，"dst net 128.3"表示目标网络为128.3的数据包，"src or dst port 22"表示源或目的端口为22的数据包。
+3. proto：通过给定协议限定匹配的数据包类型。
+常用的协议有tcp/udp/arp/ip/ether/icmp等，若未给定协议类型，则匹配所有可能的类型。例如"tcp port 21"，"udp portrange 7000-7009"。
+所以，一个基本的表达式单元格式为"proto dir type ID"
 
 ## 一些参考
 - [完整的filter表达式参考](http://www.tcpdump.org/manpages/pcap-filter.7.html)
