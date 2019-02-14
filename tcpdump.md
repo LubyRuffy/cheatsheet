@@ -15,7 +15,7 @@ tcpdump的表达式由一个或多个"单元"组成，每个单元一般包含ID
 3. proto：通过给定协议限定匹配的数据包类型。
 常用的协议有tcp/udp/arp/ip/ether/icmp等，若未给定协议类型，则匹配所有可能的类型。例如"tcp port 21"，"udp portrange 7000-7009"。
 
-所以，一个基本的表达式单元格式为"proto dir type ID"
+所以，一个基本的 **表达式单元** 格式为"proto dir type ID"
 
 ## 一些参考
 - [完整的filter表达式参考](http://www.tcpdump.org/manpages/pcap-filter.7.html)
