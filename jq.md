@@ -34,7 +34,7 @@ $ echo -ne '{"a":1, "b":2}' | jq '.a'
 # 任务场景
 * 如何列出所有的属性名称（key）?
 ```bash
-jq 'keys' a.json
+$ jq 'keys' a.json
 ```
 
 * 如何组合显示多个key对应的value？
