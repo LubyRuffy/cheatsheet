@@ -19,7 +19,7 @@ $ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack !=
 ```bash
 $ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 ```
-
+这里要注意：12的偏移是eth默认情况，如果涉及到其他的的网络类型，需要适当的进行修改
 
 
 
