@@ -9,9 +9,9 @@
 $ tcpdump -n -i en0 'tcp[tcpflags] = tcp-syn'
 ```
 
-## 抓取syn报文
+## 抓取syn,ack报文
 ```bash
-$ tcpdump -n -i en0 'tcp[tcpflags] = tcp-syn'
+$ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack != 0'
 ```
 
 
