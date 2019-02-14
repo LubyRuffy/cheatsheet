@@ -15,8 +15,9 @@ $ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack !=
 ```
 
 ## 抓取http的GET报文
+"GET "的十六进制是47455420
 ```bash
-$ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack != 0'
+$ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 ```
 
 
