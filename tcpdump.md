@@ -26,7 +26,7 @@ $ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 ## 实时远程tcpdump抓包到本地wireshark显示
 很多情况下需要交互分析，用wireshark更方便一点，这时候就可以通过管道实时推送到wireshark，命令如下：
 ```bash
-$ ssh <user>@<ip> tcpdump -U -s0 -w - port 389 | wireshark -k -i -
+$ ssh <user>@<ip> tcpdump -U -s0 -w - port 9200 | wireshark -k -i -
 ```
 
 
