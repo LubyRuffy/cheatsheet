@@ -15,5 +15,10 @@ ps aux | grep <pro>
 ```bash
 pwdx <PID>
 ```
+或者
+```bash
+ls -l /proc/<PID>/cwd
+```
+
 
 # 常见问题
