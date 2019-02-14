@@ -5,7 +5,9 @@
 * 根据进程名称列出PID
 ```bash
 pgrep <pro>
-# 或者
+```
+或者
+```bash
 ps aux | grep <pro>
 ```
 
