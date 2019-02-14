@@ -5,7 +5,14 @@ tcpdump [options] [expression]
 ```
 
 ## 表达式expression
-* host/net/port/
+### 协议如：
+- ip
+- tcp
+- icmp
+- udp
+### 方向
+### 内容
+* host/net/port/portrange
 
     源或者目标
     ```
