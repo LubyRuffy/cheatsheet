@@ -97,4 +97,10 @@ $ jq ".key1" < file.json > out.txt
 $ echo '{"a":"1234"}' | jq ".a" --raw-output
 ```
 
+## 如何打印某个属性的字符长度
+```bash
+$ echo '{"a":"1234"}' | jq ".a | length"
+4
+```
+
 # 常见问题
