@@ -5,7 +5,7 @@ tcpdump [options] [expression]
 ```
 
 ## 表达式expression
-* host
+* host/net/
 
     源或者目标
     ```
