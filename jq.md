@@ -89,12 +89,12 @@ $ jq '.c | "\(.c1[0]):\(.c2[0])"'
 
 ## 处理数据并导出文件
 ```bash
-jq ".key1" < file.json > out.txt
+$ jq ".key1" < file.json > out.txt
 ```
 
 ## 输出的字符串如何不要双引号
 ```bash
-echo '{"a":"1234"}' | jq ".a" --raw-output
+$ echo '{"a":"1234"}' | jq ".a" --raw-output
 ```
 
 # 常见问题
