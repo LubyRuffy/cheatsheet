@@ -4,6 +4,8 @@
 
 
 # 任务场景
+
+
 ## 抓取syn报文
 ```bash
 $ tcpdump -n -i en0 'tcp[tcpflags] = tcp-syn'
@@ -21,7 +23,11 @@ $ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 ```
 这里要注意：12的偏移是eth默认情况，如果涉及到其他的的网络类型，需要适当的进行修改。
 
-
+## 实时远程tcpdump抓包到本地wireshark显示
+很多情况下需要交互分析，用wireshark更方便一点，这时候就可以通过管道实时推送到wireshark，命令如下：
+```bash
+$ ssh <user>@<ip> tcpdump -U -s0 -w - port 389 | wireshark -k -i -
+```
 
 
 
