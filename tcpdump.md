@@ -23,6 +23,31 @@ tcpdump [options] [expression]
 
 # 任务场景
 
+## 最常用的命令
+用hexdump的形式显示抓取的报文
+```bash
+$ tcpdump -ns0 -X
+10:45:19.930473 IP 123.58.182.251.443 > 10.10.10.43.50055: Flags [.], ack 223, win 14, options [nop,nop,TS val 2204598484 ecr 739145925], length 0
+	0x0000:  a45e 60bf 4415 00f0 7e28 db01 0800 4500  .^`.D...~(....E.
+	0x0010:  0034 49fa 4000 3706 b35f 7b3a b6fb 0a0a  .4I.@.7.._{:....
+	0x0020:  0a2b 01bb c387 e682 c929 fdd7 43cd 8010  .+.......)..C...
+	0x0030:  000e d0a0 0000 0101 080a 8367 80d4 2c0e  ...........g..,.
+	0x0040:  78c5                                     x.
+```
+
+如果只抓取的是文本，可以用A参数
+```bash
+$ tcpdump -ns0 -A 
+,....H1.GET /img/5.png HTTP/1.1
+Host: 10.10.10.150:50081
+Accept: image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3)
+Accept-Language: zh-cn
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+```
+
+
 
 ## 抓取syn报文
 ```bash
