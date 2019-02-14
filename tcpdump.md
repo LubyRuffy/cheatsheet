@@ -72,6 +72,8 @@ $ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 $ ssh <user>@<ip> tcpdump -U -s0 -w - <filter> | wireshark -k -i -
 ```
 
+## 一些参考
+[](https://danielmiessler.com/study/tcpdump/)
 
 
 # 常见问题
