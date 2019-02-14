@@ -17,20 +17,10 @@ tcpdump [options] [expression]
 - dst
 
 ### 内容
-* host/net/port/portrange
-
-    源或者目标
-    ```
-    host 192.168.1.1
-    ```
-    源地址
-    ```
-    src host 192.168.1.1
-    ```
-    目标地址
-    ```
-    dst host 192.168.1.1
-    ```
+* host
+* net
+* port
+* portrange
 
 
 # 任务场景
