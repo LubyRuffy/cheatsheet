@@ -14,6 +14,14 @@ $ tcpdump -n -i en0 'tcp[tcpflags] = tcp-syn'
 $ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack != 0'
 ```
 
+## 抓取http的GET报文
+```bash
+$ tcpdump -n -i en0 'tcp[tcpflags] & tcp-syn != 0 and tcp[tcpflags] & tcp-ack != 0'
+```
+
+
+
+
 
 
 # 常见问题
