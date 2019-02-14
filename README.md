@@ -23,13 +23,16 @@
 
 # 目录
 * [简介](README.md)
-* [Bash](bash.md)
+* [Linux基础](linuxji-chu-ming-ling.md)
+  * [Bash](bash.md)
+  * [jq](jq.md)
+  * [tcpdump](tcpdump.md)
 * [Golang](golang.md)
 * [Docker](docker.md)
 * [Git](git.md)
 * [MySQL](mysql.md)
 * [Regex](regex.md)
-* [Linux基础](linuxji-chu-ming-ling.md)
-    - [jq](jq.md)
-    - [tcpdump](tcpdump.md)
+
+
+
 
