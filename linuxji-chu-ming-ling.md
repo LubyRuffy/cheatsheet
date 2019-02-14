@@ -7,6 +7,7 @@
 pgrep <pro>
 ps aux | grep <pro>
 ```
+
 * 如何获取运行程序的目录？
 ```bash
 pwdx <PID>
