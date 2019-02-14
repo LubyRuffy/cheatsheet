@@ -11,7 +11,11 @@ tcpdump [options] [expression]
 - icmp
 - udp
 - ...
+
 ### 方向
+- src
+- dst
+
 ### 内容
 * host/net/port/portrange
 
