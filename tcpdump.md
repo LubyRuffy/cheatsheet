@@ -22,6 +22,11 @@ tcpdump [options] [expression]
 * port
 * portrange
 
+## 一些参考
+- [50 tcpdump Examples for Security and Networking Professionals](https://danielmiessler.com/study/tcpdump/)
+
+
+
 
 # 任务场景
 
@@ -77,8 +82,6 @@ $ tcpdump -n -i en0 'tcp[(tcp[12]>>2):4] = 0x47455420'
 $ ssh <user>@<ip> tcpdump -U -s0 -w - <filter> | wireshark -k -i -
 ```
 
-## 一些参考
-- [50 tcpdump Examples for Security and Networking Professionals](https://danielmiessler.com/study/tcpdump/)
 
 
 # 常见问题
