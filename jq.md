@@ -118,8 +118,8 @@ $ echo -e '{"a":"1234"}\n{"a":"1"}' | jq "select((.a | length)>3) | .a"
 
 ## 如何最小（minimum）格式化输出
 ```bash
-$ echo -e '{"a":"1234"}\n{"a":"1"}' | jq "select((.a | length)>3) | .a"
-"1234"
+$ echo -e '{"a":"1234",\n   "b":     1}' | jq -c
+{"a":"1234","b":1}
 ```
 
 
