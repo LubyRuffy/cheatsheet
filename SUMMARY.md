@@ -8,7 +8,7 @@
 * [Golang](golang.md)
 * [Docker](docker.md)
 * [Git](git.md)
-* [MySQL](mysql.md)
 * [Regex](regex.md)
-
+* 数据库
+  * [MySQL](mysql.md)
 
