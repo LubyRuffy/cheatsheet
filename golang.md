@@ -70,6 +70,7 @@ switch i.(type) {
         fmt.Println(arg, "is an unknown type.")
 }
 ```
+与C语言不同，默认情况下就自带了break效果，所以如果需要继续往后传递，使用fallthrough语法。
 
 ## array数组和slices切片
 ```golang
