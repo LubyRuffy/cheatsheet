@@ -680,3 +680,5 @@ var a2 [5]int //无长度定义，是Slice
 fmt.Println(a1, len(a1), cap(a1)) // [] 0 0
 fmt.Println(a2, len(a2), cap(a2)) // [0 0 0 0 0] 5 5
 ```
+
+* defer对for循环有效吗？
