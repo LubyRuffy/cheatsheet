@@ -6,6 +6,7 @@
 - 也可以用cerebro：
 ```bash
 docker run -d -p 9000:9000 --name cerebro yannart/cerebro:latest
+open http://127.0.0.1:9000/#/connect
 ```
 
 # 常见问题
