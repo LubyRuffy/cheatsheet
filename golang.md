@@ -690,3 +690,5 @@ func main() {
 }
 ```
 输出了三个test，说明有效 
+
+* struct的new(File)和&File{}区别
