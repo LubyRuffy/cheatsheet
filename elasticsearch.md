@@ -5,7 +5,7 @@
 - https://github.com/lenolee16/bigdesk
 - 也可以用cerebro：
 ```bash
-
+docker run -d -p 9000:9000 --name cerebro yannart/cerebro:latest
 ```
 
 # 常见问题
