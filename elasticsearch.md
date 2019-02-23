@@ -10,6 +10,7 @@ cd bigdesk/_site
 # 随便启动一个服务器
 python -m SimpleHTTPServer
 ```
+
 - 也可以用cerebro：
 ```bash
 docker run -d -p 9000:9000 --name cerebro yannart/cerebro:latest
