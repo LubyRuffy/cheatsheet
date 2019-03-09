@@ -53,6 +53,15 @@ git add <files>
 git commit -m "<Brief description of this commit>"
 ```
 
+* 如何将当前的代码提交位新的项目？
+```bash
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@<gitserver>:<project_url>.git
+git push -u origin --all
+git push -u origin --tags
+```
+
 * 如何只查看某个目录下的branch不同？
 ```bash
 git diff <branch1> <branch2> -- ./testdir
