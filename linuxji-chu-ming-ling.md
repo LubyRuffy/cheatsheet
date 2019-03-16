@@ -27,5 +27,8 @@ pwdx <PID>
 ls -l /proc/<PID>/cwd
 ```
 
+* 添加用户
+
+
 
 # 常见问题
