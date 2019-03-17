@@ -668,6 +668,11 @@ for true {
 }
 ```
 
+* mac osx下生成测试覆盖度报告并打开html报告
+```golang
+go test ./... -coverprofile cover.out && go tool cover -html=cover.out -o cover.html && open cover.html
+```
+
 # 常见问题
 
 * array和slice，数组与切片的区别是什么？
