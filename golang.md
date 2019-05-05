@@ -658,6 +658,8 @@ solaris	amd64
 windows	386
 windows	amd64
 
+可以通过go tool dist list查看列表
+
 * []byte切换行
 ```golang
 bytesReader := bytes.NewReader(b)
