@@ -678,13 +678,13 @@ go test ./... -coverprofile cover.out && go tool cover -html=cover.out -o cover.
 * windows环境下涉及CGO的编译和调试
 经过测试，最好的方式是msys2，不要用mingw，不要用cygwin，也不要用mingw64以及msys。
 
--修改 /etc/fstab，映射用户目录，与宿主共享配置
+- 修改 /etc/fstab，映射用户目录，与宿主共享配置
 C:/Users /home ntfs binary,noacl,auto 1 1
 
--修改~/.bash_profile，增加go目录
+- 修改~/.bash_profile，增加go目录
 export PATH=$PATH:/c/Go/bin
 
--安装编译环境
+- 安装编译环境
 pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool
 
 
