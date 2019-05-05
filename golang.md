@@ -682,7 +682,7 @@ go test ./... -coverprofile cover.out && go tool cover -html=cover.out -o cover.
 C:/Users /home ntfs binary,noacl,auto 1 1
 
     - 修改~/.bash_profile，增加go目录
-export PATH=$PATH:/c/Go/bin
+export PATH=$PATH:/c/Go/bin:/mingw64/bin
 
     - 安装编译环境
 pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool vim git
