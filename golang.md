@@ -685,7 +685,7 @@ C:/Users /home ntfs binary,noacl,auto 1 1
 export PATH=$PATH:/c/Go/bin
 
     - 安装编译环境
-pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool vim
+pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool vim git
 
 
 # 常见问题
