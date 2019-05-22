@@ -163,7 +163,7 @@ func measure(g geometry) {  //参数类型为接口类型
 
 简单粗暴的理解类似于线程
 
-```golang	
+```golang
 func f(from string) {
 }
 go f("goroutine")
@@ -176,7 +176,7 @@ go func(msg string) {
 * channel
 * sync库
 原子操作：
-```golang	
+```golang
 import "sync/atomic"
 var ops uint64
 for i := 0; i < 50; i++ {
@@ -188,7 +188,7 @@ opsFinal := atomic.LoadUint64(&ops)
 fmt.Println("ops:", opsFinal)
 ```
 互斥操作：
-```golang	
+```golang
 import "sync/atomic"
 var mutex = &sync.Mutex{}
 total := 0
@@ -434,7 +434,7 @@ r = regexp.MustCompile("p([a-z]+)ch")
 fmt.Println(r)  //p([a-z]+)ch
 fmt.Println(r.ReplaceAllString("a peach", "<fruit>")) //a <fruit>
 in := []byte("a peach")
-out := r.ReplaceAllFunc(in, bytes.ToUpper) 
+out := r.ReplaceAllFunc(in, bytes.ToUpper)
 fmt.Println(string(out)) //a PEACH
 ```
 
@@ -709,7 +709,7 @@ func main() {
 	}
 }
 ```
-输出了三个test，说明有效 
+输出了三个test，说明有效
 
 * struct的new(File)和&File{}区别
 如果不需要初始化值，那么效果是一样的。如果需要初始化值，那么用&File{}的形式更简便一点

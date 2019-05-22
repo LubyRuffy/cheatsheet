@@ -108,7 +108,7 @@ ALTER TABLE table ADD new_name_field1 type1
 ALTER TABLE table ADD new_name_field1 type1 FIRST
 ALTER TABLE table ADD new_name_field1 type1 AFTER another_field
 ALTER TABLE table DROP field1
-ALTER TABLE table ADD INDEX (field); 
+ALTER TABLE table ADD INDEX (field);
 *Change field order*
 ALTER TABLE table MODIFY field1 type1 FIRST
 ALTER TABLE table MODIFY field1 type1 AFTER another_field
@@ -141,20 +141,20 @@ grant之后记得：flush privileges;
  TINYINT (1o: -217+128) SMALLINT (2o: +-65 000)
  MEDIUMINT (3o: +-16 000 000) INT (4o: +- 2 000 000 000)
  BIGINT (8o: +-9.10^18)
- 
+
  Precise interval: -(2^(8*N-1)) -> (2^8*N)-1
  /!\ INT(2) = "2 digits displayed" -- NOT "number with 2 digits max"
-  
+
  FLOAT(M,D) DOUBLE(M,D) FLOAT(D=0->53)
  /!\ 8,3 -> 12345,678 -- NOT 12345678,123!
-  
+
  TIME (HH:MM) YEAR (AAAA) DATE (AAAA-MM-JJ) DATETIME (AAAA-MM-JJ HH:MM; années 1000->9999)
  TIMESTAMP (like DATETIME, but 1970->2038, compatible with Unix)
- 
+
  VARCHAR (single-line; explicit size) TEXT (multi-lines; max size=65535) BLOB (binary; max size=65535)
  Variants for TEXT&BLOB: TINY (max=255) MEDIUM (max=~16000) LONG (max=4Go)
  Ex: VARCHAR(32), TINYTEXT, LONGBLOB, MEDIUMTEXT
- 
+
  ENUM ('value1', 'value2', ...) -- (default NULL, or '' if NOT NULL)
 ```
 

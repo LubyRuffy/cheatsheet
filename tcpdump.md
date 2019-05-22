@@ -41,7 +41,7 @@ $ tcpdump -ns0 -X
 
 如果只抓取的是文本，可以用A参数
 ```bash
-$ tcpdump -ns0 -A 
+$ tcpdump -ns0 -A
 ,....H1.GET /img/5.png HTTP/1.1
 Host: 10.10.10.150:50081
 Accept: image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
