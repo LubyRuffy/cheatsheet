@@ -123,7 +123,7 @@ $ echo -e '{"a":"1234",\n   "b":     1}' | jq -c
 {"a":"1234","b":1}
 ```
 
-## 打印object所有属性的长度
+## 打印object所有属性field的长度
 ```bash
 $ echo '{"a":"1234"}' | jq ". | length"
 4
