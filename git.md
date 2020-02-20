@@ -68,7 +68,7 @@ git diff <branch1> <branch2> -- ./testdir
 ```
 
 * 如何查看某个文件修改历史纪录，并且找到某行代码对应的历史行数
-用于分析漏洞
+用于分析漏洞：
 ```bash
 file=dubbo-rpc/dubbo-rpc-http/src/main/java/org/apache/dubbo/rpc/protocol/http/HttpProtocol.java; \
 content='RpcContext.getContext'; \
