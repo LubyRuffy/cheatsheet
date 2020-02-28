@@ -713,3 +713,6 @@ func main() {
 
 * struct的new(File)和&File{}区别
 如果不需要初始化值，那么效果是一样的。如果需要初始化值，那么用&File{}的形式更简便一点
+
+* log.Println这些函数是stdout还是stderr？
+默认是log.SetOutput(os.Stderr)，可以通过log.SetOutput(os.Stdout)修改
