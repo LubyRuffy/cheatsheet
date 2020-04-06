@@ -129,6 +129,10 @@ $ echo '{"a":"1234"}' | jq ". | length"
 1
 ```
 
-
+## 根据某个属性的值过滤父节点的名称
+```bash
+$ echo '{"lxdns.com":{"name":"网宿 CDN","link":"https://cn.chinacache.com/"},"cloudflare.net":{"name":"Cloudflare","link":"https://www.cloudflare.com"}}' | jq 'keys[] as $k | select(.[$k].name=="网宿 CDN") | $k'
+"lxdns.com"
+```
 
 # 常见问题
