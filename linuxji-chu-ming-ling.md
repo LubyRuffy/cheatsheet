@@ -32,5 +32,15 @@ ls -l /proc/<PID>/cwd
 
 ```
 
+* hexstring转换为binary，十六进制字符串转换为二进制
+```bash
+echo "4141" | xxd -r -p
+AA
+
+echo "4141" | xxd -r -p | hexdump -C
+00000000  41 41                                             |AA|
+00000002
+```
+
 
 # 常见问题
