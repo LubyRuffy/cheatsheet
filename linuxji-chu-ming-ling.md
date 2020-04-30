@@ -42,5 +42,15 @@ echo "4141" | xxd -r -p | hexdump -C
 00000002
 ```
 
+* 对比两个二进制文件
+vimdiff查看完整：
+```bash
+vimdiff <(xxd id1.ser) <(xxd id2.ser)
+```
+或者用colordiff
+```bash
+colordiff <(xxd id1.ser) <(xxd id2.ser)
+```
+
 
 # 常见问题
