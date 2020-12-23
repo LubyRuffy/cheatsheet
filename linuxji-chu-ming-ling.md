@@ -52,5 +52,10 @@ vimdiff <(xxd id1.ser) <(xxd id2.ser)
 colordiff <(xxd id1.ser) <(xxd id2.ser)
 ```
 
+* 全局监控一个文件是否尝试被请求（没有完整路径，没有进程号，只是根据文件名来判断，比如查看一个进程读取文件的目录顺序）
+```bash
+# 需要安装fatrace，mac上直接使用fs_usage
+sudo fatrace | grep libxar
+```
 
 # 常见问题
