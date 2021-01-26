@@ -82,6 +82,11 @@ content='RpcContext.getContext'; \
 * fetch与pull的区别在哪？
 pull相当于fetch+merge。
 
-
 * git怎么发音？
 git读法是/‘gi·tʌb/
+
+* warning: refname 'develop' is ambiguous.
+```bash
+git fetch --prune
+git pull origin develop
+```
