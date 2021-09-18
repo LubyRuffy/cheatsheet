@@ -134,5 +134,12 @@ $ echo '{"a":"1234"}' | jq ". | length"
 $ echo '{"lxdns.com":{"name":"网宿 CDN","link":"https://cn.chinacache.com/"},"cloudflare.net":{"name":"Cloudflare","link":"https://www.cloudflare.com"}}' | jq 'keys[] as $k | select(.[$k].name=="网宿 CDN") | $k'
 "lxdns.com"
 ```
+  
+## 排除存在某个字段的项，再显示特定字段
+```bash
+echo -e '{"a":1}\n{"a":2,"error":"yes"}\n{"a":3}' | jq '. | select(.error == null) | .a' 
+1
+3
+```
 
 # 常见问题
