@@ -94,6 +94,11 @@ echo -ne '{"a":"1", "b":"2"}' | jq '.a + " " + .b'
 # 可以结合 --raw-output使用
 ```
 
+## 整型int转换成字符串string
+```bash
+echo -ne '{"a":"1", "b":"2"}' | jq '(.a|tostring) + " " + (.b|tostring)'  --raw-output
+```
+
 ## 处理数据并导出文件
 ```bash
 $ jq ".key1" < file.json > out.txt
