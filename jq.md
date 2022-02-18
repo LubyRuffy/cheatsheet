@@ -160,5 +160,11 @@ echo -ne '{"a":"1", "b":"2"}' | jq 'join("\t")' --raw-output
 echo -ne '{"a":"1", "b":"2"}' | jq '.a + "\t" + .b' --raw-output
 1	2
 ```  
+  
+## 根据字段做条件筛选
+```bash
+echo -ne '{"a":"1", "level":"1"}\n{"a":"2", "level":"2"}\n{"a":"3", "level":"3"}' | jq 'select((.level|tonumber)==2) | .a'
+"2"
+```  
 
 # 常见问题
