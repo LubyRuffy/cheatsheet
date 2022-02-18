@@ -166,5 +166,11 @@ echo -ne '{"a":"1", "b":"2"}' | jq '.a + "\t" + .b' --raw-output
 echo -ne '{"a":"1", "level":"1"}\n{"a":"2", "level":"2"}\n{"a":"3", "level":"3"}' | jq 'select((.level|tonumber)==2) | .a'
 "2"
 ```  
+也可以多条查询
+```bash
+echo -ne '{"a":"1", "level":"1"}\n{"a":"2", "level":"2"}\n{"a":"3", "level":"3"}' | jq 'select((.level|tonumber)==1 or (.level|tonumber)==3) | .a'
+"1"
+"3"
+```
 
 # 常见问题
