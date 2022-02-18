@@ -58,4 +58,9 @@ colordiff <(xxd id1.ser) <(xxd id2.ser)
 sudo fatrace | grep libxar
 ```
 
+* 统计文件有多少行
+```bash
+wc -l hashes.txt
+```
+
 # 常见问题
