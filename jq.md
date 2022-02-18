@@ -153,5 +153,12 @@ echo -e '{"a":1}\n{"a":2,"error":"yes"}\n{"a":3}' | jq '. | select(.error == nul
 1
 3
 ```
+  
+## 如何打印tab等字符
+```bash
+echo -ne '{"a":"1", "b":"2"}' | jq 'join("\t")' --raw-output
+echo -ne '{"a":"1", "b":"2"}' | jq '.a + "\t" + .b' --raw-output
+1	2
+```  
 
 # 常见问题
