@@ -40,6 +40,11 @@ docker exec -it <container> tail -f logs/development.log
 docker exec -it <container> bash
 ```
 
+* 挂载磁盘 -v
+```
+docker exec -it <container> -v <local>:<container> 
+```
+
 
 * 启动容器：
 ```
