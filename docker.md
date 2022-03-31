@@ -42,9 +42,13 @@ docker exec -it <container> bash
 
 * 挂载磁盘 -v
 ```
-docker exec -it <container> -v <local>:<container> 
+docker exec -it -v <local>:<container> <container> 
 ```
 
+* 设置环境变量 -e
+```
+docker exec -it -e a=b <container> 
+```
 
 * 启动容器：
 ```
