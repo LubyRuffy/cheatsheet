@@ -712,7 +712,14 @@ func main() {
 输出了三个test，说明有效
 
 * struct的new(File)和&File{}区别
+
 如果不需要初始化值，那么效果是一样的。如果需要初始化值，那么用&File{}的形式更简便一点
 
 * log.Println这些函数是stdout还是stderr？
+
 默认是log.SetOutput(os.Stderr)，可以通过log.SetOutput(os.Stdout)修改
+
+* 如何用docker跨平台编译？
+```bash
+docker run -it --rm -v /opt/gopath/src:/go/src -w /go/src -e GOPROXY="https://goproxy.io,direct" golang sh -c 'apt update -y && apt install libpcap-dev -y && cd /go/src/xxx.xxx.org/xxx/xxx/cmd/xxx && go build -o xxx_linux'
+```
