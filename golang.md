@@ -687,6 +687,10 @@ export PATH=$PATH:/c/Go/bin:/mingw64/bin
     - 安装编译环境
 pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool vim git
 
+* 如何用docker跨平台编译？
+```bash
+docker run -it --rm -v /opt/gopath/src:/go/src -w /go/src -e GOPROXY="https://goproxy.io,direct" golang sh -c 'apt update -y && apt install libpcap-dev -y && cd /go/src/xxx.xxx.org/xxx/xxx/cmd/xxx && go build -o xxx_linux'
+```
 
 # 常见问题
 
@@ -719,7 +723,3 @@ func main() {
 
 默认是log.SetOutput(os.Stderr)，可以通过log.SetOutput(os.Stdout)修改
 
-* 如何用docker跨平台编译？
-```bash
-docker run -it --rm -v /opt/gopath/src:/go/src -w /go/src -e GOPROXY="https://goproxy.io,direct" golang sh -c 'apt update -y && apt install libpcap-dev -y && cd /go/src/xxx.xxx.org/xxx/xxx/cmd/xxx && go build -o xxx_linux'
-```
