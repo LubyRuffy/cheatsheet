@@ -63,4 +63,11 @@ sudo fatrace | grep libxar
 wc -l hashes.txt
 ```
 
+* grep排除多个字符串
+```bash
+echo -e "banner header body\nbanner\nbanner header\nbanner body" | grep -E -v "header|body" 
+banner
+```
+
+
 # 常见问题
