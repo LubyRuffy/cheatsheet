@@ -180,4 +180,11 @@ echo -ne '{"a":"123"}\n{"a":"234"}\n{"a":"345"}' | jq 'select(.a|contains("2"))'
 {"a":"234"}
 ```
 
+## 不包含
+在select里面用not就好了：
+```bash
+echo -ne '{"a":"123"}\n{"a":"234"}\n{"a":"345"}' | jq 'select(.a | contains("2") | not )' -c
+{"a":"345"}
+```
+  
 # 常见问题
