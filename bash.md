@@ -363,6 +363,18 @@ file=myfile_$(date +"%Y%m%d%H%M%S")
 fofacli 'domain=baidu.com' | xargs -n 1 --max-procs=3 -I{} bash -c "echo {} && wget {}"
 ```
 
+* 判断字符串包含
+```bash
+A="helloworld"
+B="low"
+if [[ $A == *$B* ]]
+then
+    echo "包含"
+else
+    echo "不包含"
+fi
+```
+
 # 常见问题
 
 * -e -f -d的区别是什么？
