@@ -381,6 +381,15 @@ echo $(basename "/a/b.txt")
 b.txt
 ```
 
+* 分隔符取左右的数据
+```
+a=abc-123
+echo ${a%-*}
+abc 
+echo ${a##*-}
+123
+```
+
 
 # 常见问题
 
