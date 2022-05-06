@@ -375,6 +375,13 @@ else
 fi
 ```
 
+* 取文件名
+```
+echo $(basename "/a/b.txt")
+b.txt
+```
+
+
 # 常见问题
 
 * -e -f -d的区别是什么？
