@@ -82,6 +82,12 @@ mkdir -p /project/path/
 git clone https://host_name/git/project.git /project/path/
 ```
 
+* 删除本地和云端的tag？
+```bash
+git tag -d v0.0.1
+git push --delete origin v0.0.1
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
