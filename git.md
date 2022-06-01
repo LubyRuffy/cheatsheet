@@ -76,6 +76,12 @@ content='RpcContext.getContext'; \
     xargs -n 1 -I{} sh -c "git show {}:$file | grep $content -n"
 ```
 
+* 如何clone到指定目录？
+```bash
+mkdir -p /project/path/
+git clone https://host_name/git/project.git /project/path/
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
