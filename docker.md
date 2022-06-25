@@ -26,6 +26,9 @@ docker rmi <image>
 * 删除tag：
 ```
 docker rmi <image>
+
+# 强制删除
+docke rmi -f <image>
 ```
 
 * 查看运行的容器：
@@ -68,6 +71,14 @@ docker attach <container>
 * 停止容器：
 ```
 docker stop <container>
+```
+
+* 删除容器：
+```
+docker rm <container>
+
+# 强制删除
+docker rm -f <container>
 ```
 
 * 查看网络配置：
