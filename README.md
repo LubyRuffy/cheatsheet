@@ -27,6 +27,7 @@
     * [Bash](bash.md)
     * [jq](jq.md)
     * [tcpdump](tcpdump.md)
+    * [curl](curl.md)
 * [数据库](shu-ju-ku.md)
     * [MySQL](mysql.md)
     * [Elasticsearch](elasticsearch.md)
