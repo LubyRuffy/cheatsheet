@@ -380,6 +380,11 @@ fi
 echo $(basename "/a/b.txt")
 b.txt
 ```
+也可以
+```
+a="/a/b.txt"; echo ${a##*/}
+b.txt
+```
 
 * 分隔符取左右的数据
 ```
