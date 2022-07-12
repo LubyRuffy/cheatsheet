@@ -405,6 +405,11 @@ no
 yes
 ```
 
+* 遍历文件名
+```
+for filename in ./*; do echo $filename; done
+```
+
 # 常见问题
 
 * -e -f -d的区别是什么？
