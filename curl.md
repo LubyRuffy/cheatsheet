@@ -36,6 +36,13 @@ curl https://58.250.137.36 -H "Host: qq.com" -k
 curl http://127.0.0.1 -H "Authorization: Token 1234"
 ```
 
+## 自定义dns解析
+跟上面绑定host头一样的效果，这里我们不用修改host头，不用修改hosts文件，直接：
+```bash
+curl https://ip.bmh.im --resolve ip.bmh.im:443:127.0.0.1
+```
+这个与直接host头有一个很大的不同，绑定host头请求https的时候，tls握手是没有域名的，而这种方式则在tls握手的时候就带上去了。
+
 ## 结合jq使用不显示中间的进度提示
 结合其他命令行比如jq会显示中间的提示：
 ```
