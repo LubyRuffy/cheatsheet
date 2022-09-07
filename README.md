@@ -33,6 +33,7 @@
     * [Elasticsearch](elasticsearch.md)
 * [开发语言](kai-fa-yu-yan.md)
     * [Golang](golang.md)
+    * [gorm](gorm.md)
 * [安全](security.md)
     * [nmap](nmap.md)
     * [metasploit](metasploit.md)
