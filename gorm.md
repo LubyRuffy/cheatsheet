@@ -61,12 +61,16 @@ func TestGetDB(t *testing.T) {
 // UserProxy 用户对应代理表
 type UserProxy struct {
 	gorm.Model
-	UserID int  `gorm:"primaryKey,index:idx_user_proxy"`
+	UserID int  `gorm:"primaryKey,uniqueIndex:idx_user_proxy"`
 	User   User `gorm:"foreignKey:UserID"`
 
-	ProxyID int   `gorm:"primaryKey,index:idx_user_proxy"`
+	ProxyID int   `gorm:"primaryKey,uniqueIndex:idx_user_proxy"`
 	Proxy   Proxy `gorm:"foreignKey:ProxyID"`
 }
+```
+对应的sql为：
+```sql
+CREATE UNIQUE INDEX `idx_user_proxy` ON `user_proxies`(`user_id`,`proxy_id`)
 ```
 
 # 常见问题
