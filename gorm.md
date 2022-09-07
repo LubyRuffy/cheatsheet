@@ -56,7 +56,7 @@ func TestGetDB(t *testing.T) {
 ```
 
 ## 如何定义复合索引（两个关键字的组合是唯一）
-还是以上面的案例举例：
+使用uniqueIndex关键字，两个字段的索引名称保持一致。拿上面的案例举例：
 ```golang
 // UserProxy 用户对应代理表
 type UserProxy struct {
