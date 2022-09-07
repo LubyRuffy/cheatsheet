@@ -7,7 +7,7 @@ gorm是golang语言中常用的数据库框架，ORM是指Object-relational mapp
 
 ## 如何定义关联关系
 有User表和Proxy表，再有一个UserProxy表来表示User和Proxy多对多的绑定关系。
-```
+```golang
 func TestGetDB(t *testing.T) {
 	type User struct {
 		gorm.Model
@@ -55,5 +55,18 @@ func TestGetDB(t *testing.T) {
 }
 ```
 
+## 如何定义复合索引（两个关键字的组合是唯一）
+还是以上面的案例举例：
+```golang
+// UserProxy 用户对应代理表
+type UserProxy struct {
+	gorm.Model
+	UserID int  `gorm:"primaryKey,index:idx_user_proxy"`
+	User   User `gorm:"foreignKey:UserID"`
+
+	ProxyID int   `gorm:"primaryKey,index:idx_user_proxy"`
+	Proxy   Proxy `gorm:"foreignKey:ProxyID"`
+}
+```
 
 # 常见问题
