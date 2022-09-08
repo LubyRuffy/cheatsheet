@@ -73,4 +73,10 @@ type UserProxy struct {
 CREATE UNIQUE INDEX `idx_user_proxy` ON `user_proxies`(`user_id`,`proxy_id`)
 ```
 
+## 设置了uniq时，如何冲突时不报错
+```sql
+// 在冲突时，什么都不做
+db.Clauses(clause.OnConflict{DoNothing: true}).Create(&user)
+```
+
 # 常见问题
