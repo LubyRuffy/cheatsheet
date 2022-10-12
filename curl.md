@@ -31,9 +31,11 @@ curl https://127.0.0.1 -k
 一些场景，比如：
 - 需要绑定host，否则提示```curl: (60) SSL: no alternative certificate subject name matches target host name '58.250.137.36'```；
 - 需要指定认证信息
+- 代理不支持dns解析
 ```bash
 curl https://58.250.137.36 -H "Host: qq.com" -k
 curl http://127.0.0.1 -H "Authorization: Token 1234"
+curl -H"Host: ip.bmh.im" http://34.216.19.233/h -x http://181.177.20.67:80 
 ```
 
 ## 自定义dns解析
@@ -59,6 +61,5 @@ curl -s http://127.0.0.1 | jq
 {
 }
 ```
-
 
 # 常见问题
