@@ -62,4 +62,9 @@ curl -s http://127.0.0.1 | jq
 }
 ```
 
+## 有无办法让"curl -F"发出去的filename包含../，而不要normalize它？
+```
+curl -F "file=@test.png;filename=../test.png"
+```
+
 # 常见问题
