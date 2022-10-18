@@ -138,8 +138,8 @@ echo '{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"]],"Sheet2":[null,["Hello wor
 ```
 ## 保留原始内容，先处理其中的一个数据字段，再进行整合
 ```
-echo '{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]]}' | zq -j 'yield {...this, ip:collect(over Sheet1 | flatten(this[0]))[0]}' -
-{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]],"ip":["IP","1.1.1.1","2.2.2.2"]}
+echo '{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]]}' | zq -j 'yield {...this, ip:collect(over Sheet1 | flatten(this[0]))[0][1:]}' -
+{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]],"ip":["1.1.1.1","2.2.2.2"]}
 ```
 ## 数组删除其中一个元素
 ```
