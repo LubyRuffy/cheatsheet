@@ -49,6 +49,36 @@ echo '1 2' | zq -z 'fork (=>pass =>pass) ' -
 如何构造不同的数据来源？大约是from，后续需要确认。</td>
 </tr>
   
+  
+<tr>
+<td>cut</td>
+<td>只保留选定的几个字段</td>
+<td>
+     
+```bash
+echo '{a:1,b:2,c:3}' | zq -z 'cut a,c' -
+{a:1,c:3}
+```
+    
+</td>
+<td></td>
+</tr>
+  
+  
+<tr>
+<td>drop</td>
+<td>删除特定的字段</td>
+<td>
+     
+```bash
+echo '1 {a:1,b:2,c:3}' | zq -z 'drop a,b' -
+1 {c:3}
+```
+    
+</td>
+<td></td>
+</tr>
+  
 </table>
 
 # 任务场景
