@@ -26,6 +26,7 @@
 * [Linux基础](linuxji-chu-ming-ling.md)
     * [Bash](bash.md)
     * [jq](jq.md)
+    * [zq](zq.md)
     * [tcpdump](tcpdump.md)
     * [curl](curl.md)
 * [Darwin基础](darwin.md)
