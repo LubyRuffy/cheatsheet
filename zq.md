@@ -115,36 +115,50 @@ echo '{"msg":"{\"code\":200}"}' | zq -j 'msg:=parse_zson(msg)' -
 ❯ echo '{"a":null}\n{"a":[1,2]}' | zq -j 'len(a)>0' -
 {"a":[1,2]}
 ```
+
 ## 如何替换一个数组中的元素，比如执行trim函数。
 ```
 echo '{"b":1, "a":[" 1 ", "2 ", " 3"]}' | zq -j 'over a with b => (trim(this) | collect(this) | yield {b,collect}) | rename host:=collect' -
 {"b":1,"host":["1","2","3"]}
 ```
+
 ## 如何选出没有字段的行？
 ```
 echo '{a:1}{b:2}{a:3}' | zq -j 'not a' -
 {"b":2}
 ```
+
 ## 如何替换字符串
 ```
 echo '{"a":"b","c":"d"}' |  zq -j 'a:=replace(a, "b", "1")' -
 {"a":"1","c":"d"}
 ```
+
 ## 如何取数组中间的一项内容？
 ```
 echo '{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"]],"Sheet2":[null,["Hello world."]]}' | zq -j 'over Sheet1 | this[0]' -
 "IP"
 "1.1.1.1"
 ```
+
 ## 保留原始内容，先处理其中的一个数据字段，再进行整合
 ```
 echo '{"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]]}' | zq -j 'yield {...this, ip:collect(over Sheet1 | flatten(this[0]))[0][1:]}' -
 {"Sheet1":[["IP","域名"],["1.1.1.1","a.com"],["2.2.2.2","b.com"]],"Sheet2":[null,["Hello world."]],"ip":["1.1.1.1","2.2.2.2"]}
 ```
-## 数组删除其中一个元素
+
+## 数组如何删除其中一个元素
 ```
 echo "[1,2,3]" | zq -j 'this[1:]' -
 [2,3]
+```
+
+## 如何取所有的key
+```
+❯ echo '{"a":1,"b":2}' | jq keys -c
+["a","b"]
+❯ echo '{"a":1,"b":2}' | zq -j 'fields(this)' -
+[["a"],["b"]]
 ```
   
 # 常见问题
