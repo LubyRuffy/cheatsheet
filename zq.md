@@ -79,6 +79,30 @@ echo '1 {a:1,b:2,c:3}' | zq -z 'drop a,b' -
 <td></td>
 </tr>
   
+  
+<tr>
+<td>over</td>
+<td>展开为一维数组，然后进行遍历；可以带上with操作，根据key进行运算。</td>
+<td>
+     
+```bash
+echo '{a:[6,5,4]} {a:[3,2,1]}' | zq -j 'over a' -
+6
+5
+4
+3
+2
+1
+
+echo '{a:[1,2],s:"foo"} {a:[3,4,5],s:"bar"}' | zq -z 'over a with s => (sum(this) | yield {s,sum})' -
+{s:"foo",sum:3}
+{s:"bar",sum:12}
+```
+    
+</td>
+<td>over后带有括号就表名在处理一行</td>
+</tr>
+  
 </table>
 
 # 任务场景
