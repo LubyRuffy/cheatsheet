@@ -178,6 +178,7 @@ echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(
 echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(this) | yield collect | yield unflatten(this)' -
 {"b":2,"c":3}
 ```
+这种方式只能处理一行，如何处理多行？
   
 # 常见问题
   
