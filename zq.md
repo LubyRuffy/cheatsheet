@@ -178,8 +178,19 @@ echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(
 echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(this) | yield collect | yield unflatten(this)' -
 {"b":2,"c":3}
 ```
-这种方式只能处理一行，如何处理多行？
-  
+
+上面这种方式只能处理一行，如何处理多行：
+```
+echo '{".a":"1","b":2,"c":3}\n{".a":"4","b":5,"c":6}' | zq -j 'over this =>(key[0][0:1] != "." | collect(this) | yield collect | over this => ( collect(this) | yield collect | yield unflatten(this) ) )' -
+{"b":2,"c":3}
+{"b":5,"c":6}
+```
+这个语句必须要在1.2.0版本才ok，否则提示
+```
+{"b":2,"c":3}
+{"error":"unflatten: duplicate field: \"b\""}
+```
+
 # 常见问题
   
 ## yield到底有什么用？
