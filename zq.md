@@ -168,6 +168,15 @@ zq -j 'fields(this) | over this | this[0] | collect(this) | yield collect' -
 echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "."' -
 {"key":["b"],"value":2}
 {"key":["c"],"value":3}
+
+echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(this)' -
+{"collect":[{"key":["b"],"value":2},{"key":["c"],"value":3}]}
+
+echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(this) | yield collect' -
+[{"key":["b"],"value":2},{"key":["c"],"value":3}]
+
+echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "." | collect(this) | yield collect | yield unflatten(this)' -
+{"b":2,"c":3}
 ```
   
 # 常见问题
