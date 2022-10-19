@@ -159,6 +159,15 @@ echo "[1,2,3]" | zq -j 'this[1:]' -
 ["a","b"]
 ❯ echo '{"a":1,"b":2}' | zq -j 'fields(this)' -
 [["a"],["b"]]
+zq -j 'fields(this) | over this | this[0] | collect(this) | yield collect' -
+["a","b"]
+```
+
+## 如何过滤key，比如排除开头为点符号.
+```
+echo '{".a":"1","b":2,"c":3}' | zq -j 'over this | key[0][0:1] != "."' -
+{"key":["b"],"value":2}
+{"key":["c"],"value":3}
 ```
   
 # 常见问题
