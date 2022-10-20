@@ -215,6 +215,12 @@ echo '{".a":"1","b":2,"c":3}\n{".a":"4","b":5,"c":6}' | zq -j 'over this =>(key[
 {"error":"unflatten: duplicate field: \"b\""}
 ```
 
+## 如何合并多个key下面数组的偏移，主要用于处理cvs等格式
+```
+echo '{"a.cvs":[["ip","domain"],["1.1.1.1","a.com"]]}\n{"b.cvs":[["ip","domain"],["2.2.2.2","b.com"]]}' | zq -j 'over this | value[1:][0][0] | collect(this)' -
+{"collect":["1.1.1.1","2.2.2.2"]}
+```
+
 # 常见问题
   
 ## yield到底有什么用？
