@@ -231,3 +231,14 @@ echo '{"a.cvs":[["ip","domain"],["1.1.1.1","a.com"]]}\n{"b.cvs":[["ip","domain"]
 ❯ echo '{"a":[" 1 ", "2 ", " 3"]}' | zq -j 'yield a' -
 [" 1 ","2 "," 3"]
 ```
+
+## union和collect有什么区别？
+union默认做了uniq操作，collect没有。
+```
+❯ echo '{"a":1}\n{"a":2}\n{"a":1,"b":2}\n{"a":1}' | zq -j 'c:=collect(this) by a' -
+{"a":1,"c":[{"a":1},{"a":1,"b":2},{"a":1}]}
+{"a":2,"c":[{"a":2}]}
+❯ echo '{"a":1}\n{"a":2}\n{"a":1,"b":2}\n{"a":1}' | zq -j 'c:=union(this) by a' -
+{"a":1,"c":[{"a":1},{"a":1,"b":2}]}
+{"a":2,"c":[{"a":2}]}
+```
