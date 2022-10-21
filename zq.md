@@ -221,6 +221,12 @@ echo '{"a.cvs":[["ip","domain"],["1.1.1.1","a.com"]]}\n{"b.cvs":[["ip","domain"]
 {"collect":["1.1.1.1","2.2.2.2"]}
 ```
 
+## 如何合并多个key下面数组的偏移，主要用于处理cvs等格式
+```
+❯ echo '{"ip":"1.1.1.1","a":1}\n{"ip":"1.1.1.1","b":2}' | zq -j 'union(this) by ip | over union with ip1=ip => ( drop ip | union(this) | yield {ip:ip1,...this} ) ' -
+{"ip":"1.1.1.1","union":[{"a":1},{"b":2}]}
+```
+
 # 常见问题
   
 ## yield到底有什么用？
