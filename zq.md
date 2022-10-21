@@ -233,6 +233,13 @@ echo '{"a.cvs":[["ip","domain"],["1.1.1.1","a.com"]]}\n{"b.cvs":[["ip","domain"]
 ❯ echo '{"name":"a","value":1}' | zq -j '{name:value}' -
 {"name":1}
 ```
+好像不行，要用jq
+
+## 如何合并多行的多个key
+```
+❯ echo '{"ip":"1.1.1.1","a":1}\n{"ip":"1.1.1.1","b":2}' | zq -j 'union(this) by ip | yield {...union[0], ...union[1]}' -
+{"ip":"1.1.1.1","a":1,"b":2}
+```
 
 # 常见问题
   
