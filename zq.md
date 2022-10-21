@@ -227,6 +227,13 @@ echo '{"a.cvs":[["ip","domain"],["1.1.1.1","a.com"]]}\n{"b.cvs":[["ip","domain"]
 {"ip":"1.1.1.1","union":[{"a":1},{"b":2}]}
 ```
 
+## yield中，如何用一个从json中提取的值作为key？
+如下这个不满足预期，预期返回：```{"a":1}```
+```
+❯ echo '{"name":"a","value":1}' | zq -j '{name:value}' -
+{"name":1}
+```
+
 # 常见问题
   
 ## yield到底有什么用？
