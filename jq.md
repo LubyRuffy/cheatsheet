@@ -265,3 +265,6 @@ echo '{"ip":"1.1.1.1","a":1}' | jq -c 'del(.a,.ip)'
   
   
 # 常见问题
+  
+## 如何方便的调试jq语法？
+- https://jqplay.org/
