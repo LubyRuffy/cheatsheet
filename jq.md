@@ -270,6 +270,14 @@ echo '{"a.b":1}' | jq '."a.b"'
 1
 ```  
   
+## 如何转换为csv？
+```
+echo -n '{"a":"1","b":"2","c":"3"}\n{"a":"4","b":"5","c":"6"}' | jq --slurp --compact-output --raw-output '(map(keys) | add | unique) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[] | @csv'
+"a","b","c"
+"1","2","3"
+"4","5","6"
+```  
+  
   
 # 常见问题
   
