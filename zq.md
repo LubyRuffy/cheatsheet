@@ -249,6 +249,26 @@ a,b,c
 4,5,6
 ```
 
+## 字段名称带有中文怎么办？
+暂时无解
+```
+echo '{"a":1,"b":1}' | zq -j 'cut a,b' -
+{"a":1,"b":1}
+
+echo '{"测试":1,"哈哈":1}' | zq -j 'cut 测试' -
+zq: error parsing Zed at column 5:
+cut 测试
+=== ^ ===
+
+echo '{"测试":1,"哈哈":1}' | zq -j 'cut "测试"' -
+illegal left-hand side of assignment'
+
+echo '{"测试":1,"哈哈":1}' | zq -j 'cut "测试","哈哈"' -
+illegal left-hand side of assignment'
+
+
+```
+
 # 常见问题
   
 ## yield到底有什么用？
