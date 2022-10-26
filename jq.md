@@ -307,8 +307,17 @@ echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c 'def fun(a):a[0],a[1]; fun([.a1,.a2
 [3,4,5]
 ```
   
+## 如何根据key来修改value？甚至是直接修改key？
+```
+echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c 'with_entries(.value=1)'
+{"a1":1,"a2":1}
+  
+echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c 'with_entries(.key=(if .key=="a1" then "b" else .key end ))'
+{"b":[1,2,3,4],"a2":[3,4,5]}
+```
+  
 # 常见问题
   
 ## 如何方便的调试jq语法？
-- https://jqplay.org/
+- https://jqplay.org/ 支持多行
 - https://jqterm.com/
