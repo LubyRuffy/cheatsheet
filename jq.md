@@ -304,3 +304,4 @@ echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c '.a1more=.a1-.a2, .a2more=.a2-.a1, 
   
 ## 如何方便的调试jq语法？
 - https://jqplay.org/
+- https://jqterm.com/
