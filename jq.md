@@ -323,6 +323,21 @@ echo '{"a":[["1.1.1.1:80",80,"1.1.1.1"],["a.com:443",443,"2.2.2.2"]]}' | jq '.a 
   "a.com:443"
 ]
 ```
+ 
+## 如何提取一个url中的host？
+```
+echo '["1.1.1.1","1.1.1.1:81","http://1.1.1.1:82","https://1.1.1.1:83","[fe80::8407:ad05:f6be:90ad]", "https://[fe80::8407:ad05:f6be:90ad]:8443"]' | jq 'def extracthost(host): host|split("://")|last|(if (.|contains("]")) then .|split("]")[0:-1]|join("")+"]" else split(":")|first end); reduce .[] as $item ([]; .+=[extracthost($item)])'
+[
+  "1.1.1.1",
+  "1.1.1.1",
+  "1.1.1.1",
+  "1.1.1.1",
+  "[fe80::8407:ad05:f6be:90ad]",
+  "[fe80::8407:ad05:f6be:90ad]"
+]
+```
+  
+  
   
 # 常见问题
   
