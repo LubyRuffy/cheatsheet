@@ -315,6 +315,14 @@ echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c 'with_entries(.value=1)'
 echo '{"a1":[1,2,3,4],"a2":[3,4,5]}' | jq -c 'with_entries(.key=(if .key=="a1" then "b" else .key end ))'
 {"b":[1,2,3,4],"a2":[3,4,5]}
 ```
+ 
+## 如何根据条件来提取数据？
+```
+echo '{"a":[["1.1.1.1:80",80,"1.1.1.1"],["a.com:443",443,"2.2.2.2"]]}' | jq '.a | reduce .[] as $item ([]; if ($item[0] | contains($item[2]) | not) then .+=[$item[0]] else . end)'
+[
+  "a.com:443"
+]
+```
   
 # 常见问题
   
