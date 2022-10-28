@@ -4,6 +4,19 @@ zq和jq都能用于进行json的操作运算，选择是一个问题。考虑到
 
 - 速度：zq快
 - 中文key：jq支持，zq不支持
+```
+echo '{}' | zq -j 'a:=1' -
+{"a":1}
+echo '{}' | zq -j '"测试":=1' -
+zq: error parsing Zed at column 9:
+"测试":=1
+    === ^ ===
+    
+echo '{}' | jq -c '.a=1'
+{"a":1}
+echo '{}' | jq -c '."测试"=1'
+{"测试":1}
+```
 - 定义函数：jq支持，zq不支持
 - ip解析函数：zq支持，jq不支持，比如ipv6地址的归一化处理，zq直接一个cast搞定：
 ```
