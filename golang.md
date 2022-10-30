@@ -692,6 +692,24 @@ pacman -S mingw-w64-x86_64-gcc make autoconf automake libtool vim git
 docker run -it --rm -v /opt/gopath/src:/go/src -w /go/src -e GOPROXY="https://goproxy.io,direct" golang sh -c 'apt update -y && apt install libpcap-dev -y && cd /go/src/xxx.xxx.org/xxx/xxx/cmd/xxx && go build -o xxx_linux'
 ```
 
+* 获取本地路由默认ip的最快方式：
+多网卡的模式下，我们想知道出网的默认网卡。
+```
+// https://stackoverflow.com/a/37382208
+// Get preferred outbound ip of this machine
+func GetOutboundIP() net.IP {
+	conn, err := net.Dial("udp", "8.8.8.8:80")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer conn.Close()
+
+	localAddr := conn.LocalAddr().(*net.UDPAddr)
+
+	return localAddr.IP
+}
+```
+
 # 常见问题
 
 * array和slice，数组与切片的区别是什么？
