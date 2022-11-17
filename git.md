@@ -81,6 +81,10 @@ content='RpcContext.getContext'; \
 mkdir -p /project/path/
 git clone https://host_name/git/project.git /project/path/
 ```
+一个典型的场景比如go项目，我们希望从github下载到go/src对应的目录下面，咱们可以这样：
+```bash
+echo https://github.com/macronut/phantomsocks | awk -F'//' '{print $2}' | xargs -I{} git clone https://{} `go env GOPATH`/{}
+```
 
 * 删除本地和云端的tag？
 ```bash
