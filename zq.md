@@ -283,6 +283,10 @@ echo -n '{"ts":"2022-12-17 09:00:00"}\n{"ts":"2022-12-18 09:00:00"}' | zq -j 'yi
 # 取最小值
 echo -n '{"ts":"2022-12-17 09:00:00"}\n{"ts":"2022-12-18 09:00:00"}' | zq -j 'yield time(this.ts) | min(this)' -
 {"min":"2022-12-17T09:00:00Z"}
+
+# 日期的格式化输出在zq中暂时不支持，可以手动进行修改：
+echo -n '{"ts":"2022-12-17 09:00:00"}\n{"ts":"2022-12-18 09:00:00"}' | zq -j 'yield time(this.ts) | min(this) | yield string(this.min) | yield replace(this, "Z", "") | yield replace(this, "T", " ")' -
+"2022-12-17 09:00:00"
 ```
 
 # 常见问题
