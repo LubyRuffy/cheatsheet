@@ -269,6 +269,15 @@ illegal left-hand side of assignment'
 
 ```
 
+## 时间戳timestamp和时间格式的相互转换
+```
+echo '{"ts":1671267600000000000}' | zq -j 'yield time(this.ts)' -
+"2022-12-17T09:00:00Z"
+
+echo '{"ts":"2022-12-17 09:00:00"}' | zq -j 'yield int64(time(this.ts))' -
+1671267600000000000
+```
+
 # 常见问题
   
 ## yield到底有什么用？
