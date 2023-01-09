@@ -92,6 +92,12 @@ git tag -d v0.0.1
 git push --delete origin v0.0.1
 ```
 
+* windows下msys2的git用LF而不是CR+LF
+```bash
+git config --global core.autocrlf false
+git config --global core.eol lf
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
