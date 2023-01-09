@@ -97,6 +97,12 @@ git push --delete origin v0.0.1
 git config --global core.autocrlf false
 git config --global core.eol lf
 ```
+对于已经git clone到本地的仓库，可以这么操作：
+```
+git ls-files -z | xargs -0 rm
+git checkout .
+```
+这种方式最常见的场景是：windows下clone的代码，在linux下执行./bootstrap会报错提示```-bash: ./bootstrap: /bin/sh^M: bad interpreter: No such file or directory```
 
 # 常见问题
 * clone与fetch的区别在哪？
