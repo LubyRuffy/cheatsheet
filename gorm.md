@@ -85,4 +85,11 @@ var cnt int64
 err = Get().Model(&Product{}).Count(&cnt).Error
 ```
 
+## 定义model时增加注释说明
+```sql
+type User struct {
+  Memo   string `gorm:"comment:备注"`
+}
+```
+
 # 常见问题
