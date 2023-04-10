@@ -91,5 +91,10 @@ type User struct {
   Memo   string `gorm:"comment:备注"`
 }
 ```
+```shell
+sqlite> .tables
+useres
+.schema --indent useres
+```
 
 # 常见问题
