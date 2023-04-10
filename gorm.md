@@ -79,4 +79,10 @@ CREATE UNIQUE INDEX `idx_user_proxy` ON `user_proxies`(`user_id`,`proxy_id`)
 db.Clauses(clause.OnConflict{DoNothing: true}).Create(&user)
 ```
 
+## 取count操作
+```sql
+var cnt int64
+err = Get().Model(&Product{}).Count(&cnt).Error
+```
+
 # 常见问题
