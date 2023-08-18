@@ -336,7 +336,12 @@ echo '["1.1.1.1","1.1.1.1:81","http://1.1.1.1:82","https://1.1.1.1:83","[fe80::8
   "[fe80::8407:ad05:f6be:90ad]"
 ]
 ```
-  
+
+## 如何实时输出到管道
+默认情况下jq是有buffer的，如果想要实时，可以用--unbuffered参数：
+```
+fofa random --fixUrl --size 100 --fields host --sleep 1 | jq -r .host --unbuffered | go run ./main.go
+```
   
   
 # 常见问题
