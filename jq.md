@@ -342,6 +342,30 @@ echo '["1.1.1.1","1.1.1.1:81","http://1.1.1.1:82","https://1.1.1.1:83","[fe80::8
 ```
 fofa random --fixUrl --size 100 --fields host --sleep 1 | jq -r .host --unbuffered | go run ./main.go
 ```
+
+## 根据对象的数组中的某个字段进行排序
+```
+echo '{
+  "aggregations": {
+    "query_strings": {
+      "buckets": [
+        {
+          "key": "aaa",
+          "user_id_count": {
+            "value": 1
+          }
+        },
+        {
+          "key": "bbb",
+          "user_id_count": {
+            "value": 2
+          }
+        }
+      ]
+    }
+  }
+}' | jq '.aggregations.query_strings.buckets | sort_by(.user_id_count.value)'
+```
   
   
 # 常见问题
