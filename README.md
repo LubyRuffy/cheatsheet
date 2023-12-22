@@ -19,28 +19,33 @@
 版权所有 北京华顺信安科技有限公司：http://www.huashunxinan.net 。
 
 # 版本
-20221001
+20231201
 
 # 目录
 * [简介](README.md)
-* [Linux基础](linuxji-chu-ming-ling.md)
-    * [Bash](bash.md)
-    * [jq](jq.md)
-    * [zq](zq.md)
-    * [tcpdump](tcpdump.md)
-    * [curl](curl.md)
-* [Darwin基础](darwin.md)
+* 计算机基础
+  * [Linux基础](linuxji-chu-ming-ling.md)
+      * [Bash](bash.md)
+      * [jq](jq.md)
+      * [zq](zq.md)
+      * [tcpdump](tcpdump.md)
+      * [curl](curl.md)
+  * [Darwin基础](darwin.md)
+  * [Docker](docker.md)
+  * [Git](git.md)
+  * [Regex](regex.md)
 * [数据库](shu-ju-ku.md)
     * [MySQL](mysql.md)
     * [Elasticsearch](elasticsearch.md)
-* [开发语言](kai-fa-yu-yan.md)
+* [开发基础](kai-fa-yu-yan.md)
     * [Golang](golang.md)
     * [gorm](gorm.md)
-* [安全](security.md)
+    * [Gitlab](gitlab.md)
+* [安全基础](security.md)
     * [nmap](nmap.md)
     * [metasploit](metasploit.md)
-* [Docker](docker.md)
-* [Git](git.md)
-* [Regex](regex.md)
-* [Gitlab](gitlab.md)
+* 机器学习
+  * [jupyter](ml/jupyter.md)
+  * [huggingface](ml/huggingface.ipynb)
+
 
