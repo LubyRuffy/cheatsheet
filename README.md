@@ -47,5 +47,6 @@
 * 机器学习
   * [jupyter](ml/jupyter.md)
   * [huggingface](ml/huggingface.ipynb)
+  * [conda](ml/conda.md)
 
 
