@@ -48,3 +48,11 @@ jupyter lab --allow-root
 # 任务
 
 # 常见问题
+
+## 报错：Jupyter command `jupyter-notebook` not found.
+```shell
+conda install notebook
+
+或者
+pip install notebook
+```

@@ -104,6 +104,12 @@ git checkout .
 ```
 这种方式最常见的场景是：windows下clone的代码，在linux下执行./bootstrap会报错提示```-bash: ./bootstrap: /bin/sh^M: bad interpreter: No such file or directory```
 
+* `git clone --recurse-submodules`失败后如何把子模块重新下载？
+`fatal: clone of 'https://github.com/xxx/xxx' into submodule path 'xxx/xxx' failed`
+```shell
+git submodule update
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
