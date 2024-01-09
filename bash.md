@@ -415,6 +415,12 @@ yes
 for filename in ./*; do echo $filename; done
 ```
 
+* 扩展~符号
+有时候我们获取的字符串带有tilde波浪线需要扩展成完整的路径，可以用eval的方式：
+```
+eval echo '~/.cache'
+```
+
 # 常见问题
 
 * -e -f -d的区别是什么？
