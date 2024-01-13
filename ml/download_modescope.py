@@ -1,8 +1,10 @@
-from modelscope import AutoModelForCausalLM, AutoTokenizer
+from modelscope import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from modelscope import GenerationConfig
+import torch
 
+model_name = "baichuan-inc/Baichuan-13B-Chat"
 # Note: The default behavior now has injection attack prevention off.
-tokenizer = AutoTokenizer.from_pretrained("qwen/Qwen-72B-Chat", trust_remote_code=True)
+# tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
 # use bf16
 # model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-14B-Chat", device_map="auto", trust_remote_code=True, bf16=True).eval()
@@ -11,7 +13,15 @@ tokenizer = AutoTokenizer.from_pretrained("qwen/Qwen-72B-Chat", trust_remote_cod
 # use cpu only
 # model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-14B-Chat", device_map="cpu", trust_remote_code=True).eval()
 # use auto mode, automatically select precision based on the device.
-model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-72B-Chat", device_map="auto", trust_remote_code=True).eval()
+model = AutoModelForCausalLM.from_pretrained(model_name,
+                                             device_map="mps",
+                                             low_cpu_mem_usage=True,
+                                             quantization_config=BitsAndBytesConfig(
+                                                 # load_in_4bit=True,
+                                                 bnb_4bit_quant_type="nf4",
+                                                 bnb_4bit_use_double_quant=True,
+                                             ),
+                                             trust_remote_code=True).eval()
 
 # Specify hyperparameters for generation. But if you use transformers>=4.32.0, there is no need to do this.
 # model.generation_config = GenerationConfig.from_pretrained("Qwen/Qwen-14B-Chat", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
