@@ -1,47 +1,10 @@
-from modelscope import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-from modelscope import GenerationConfig
-import torch
-
-model_name = "baichuan-inc/Baichuan-13B-Chat"
-# Note: The default behavior now has injection attack prevention off.
-# tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-
-# use bf16
-# model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-14B-Chat", device_map="auto", trust_remote_code=True, bf16=True).eval()
-# use fp16
-# model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-14B-Chat", device_map="auto", trust_remote_code=True, fp16=True).eval()
-# use cpu only
-# model = AutoModelForCausalLM.from_pretrained("qwen/Qwen-14B-Chat", device_map="cpu", trust_remote_code=True).eval()
-# use auto mode, automatically select precision based on the device.
-model = AutoModelForCausalLM.from_pretrained(model_name,
-                                             device_map="mps",
-                                             low_cpu_mem_usage=True,
-                                             quantization_config=BitsAndBytesConfig(
-                                                 # load_in_4bit=True,
-                                                 bnb_4bit_quant_type="nf4",
-                                                 bnb_4bit_use_double_quant=True,
-                                             ),
-                                             trust_remote_code=True).eval()
-
-# Specify hyperparameters for generation. But if you use transformers>=4.32.0, there is no need to do this.
-# model.generation_config = GenerationConfig.from_pretrained("Qwen/Qwen-14B-Chat", trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
-
-# 第一轮对话 1st dialogue turn
-response, history = model.chat(tokenizer, "你好", history=None)
-print(response)
-# 你好！很高兴为你提供帮助。
-
-# 第二轮对话 2nd dialogue turn
-response, history = model.chat(tokenizer, "给我讲一个年轻人奋斗创业最终取得成功的故事。", history=history)
-print(response)
-# 这是一个关于一个年轻人奋斗创业最终取得成功的故事。
-# 故事的主人公叫李明，他来自一个普通的家庭，父母都是普通的工人。从小，李明就立下了一个目标：要成为一名成功的企业家。
-# 为了实现这个目标，李明勤奋学习，考上了大学。在大学期间，他积极参加各种创业比赛，获得了不少奖项。他还利用课余时间去实习，积累了宝贵的经验。
-# 毕业后，李明决定开始自己的创业之路。他开始寻找投资机会，但多次都被拒绝了。然而，他并没有放弃。他继续努力，不断改进自己的创业计划，并寻找新的投资机会。
-# 最终，李明成功地获得了一笔投资，开始了自己的创业之路。他成立了一家科技公司，专注于开发新型软件。在他的领导下，公司迅速发展起来，成为了一家成功的科技企业。
-# 李明的成功并不是偶然的。他勤奋、坚韧、勇于冒险，不断学习和改进自己。他的成功也证明了，只要努力奋斗，任何人都有可能取得成功。
-
-# 第三轮对话 3rd dialogue turn
-response, history = model.chat(tokenizer, "给这个故事起一个标题", history=history)
-print(response)
-# 《奋斗创业：一个年轻人的成功之路》
+from transformers import AutoTokenizer, AutoModelForCausalLM
+tokenizer = AutoTokenizer.from_pretrained("deepseek-ai/deepseek-coder-6.7b-instruct", trust_remote_code=True, device_map='mps')
+model = AutoModelForCausalLM.from_pretrained("deepseek-ai/deepseek-coder-6.7b-instruct", trust_remote_code=True, device_map='mps')
+messages=[
+    { 'role': 'user', 'content': "write a quick sort algorithm in python."}
+]
+inputs = tokenizer.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
+# 32021 is the id of <|EOT|> token
+outputs = model.generate(inputs, max_new_tokens=512, do_sample=False, top_k=50, top_p=0.95, num_return_sequences=1, eos_token_id=32021)
+print(tokenizer.decode(outputs[0][len(inputs[0]):], skip_special_tokens=True))
