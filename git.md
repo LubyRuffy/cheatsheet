@@ -110,6 +110,15 @@ git checkout .
 git submodule update
 ```
 
+* 合并分支到主分支
+```shell
+# 先切换到主分支
+git checkout main
+# 合并分子
+git merge branch1
+git push
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
