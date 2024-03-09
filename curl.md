@@ -67,4 +67,26 @@ curl -s http://127.0.0.1 | jq
 curl -F "file=@test.png;filename=../test.png"
 ```
 
+## 请求路径带有两个点符号`..`
+默认是不可以的，带上`--path-as-is`参数就可以了：
+```shell
+curl http://127.0.0.1:11245/../../../abc -vv  --path-as-is
+* processing: http://127.0.0.1:11245/../../../abc
+*   Trying 127.0.0.1:11245...
+* Connected to 127.0.0.1 (127.0.0.1) port 11245
+> GET /../../../abc HTTP/1.1
+> Host: 127.0.0.1:11245
+> User-Agent: curl/8.2.1
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Sat, 09 Mar 2024 15:45:53 GMT
+< Content-Length: 29
+< Content-Type: text/plain; charset=utf-8
+<
+* Connection #0 to host 127.0.0.1 left intact
+Exact match for /../../../abc%
+```
+
+
 # 常见问题
