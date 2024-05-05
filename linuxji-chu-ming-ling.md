@@ -69,5 +69,10 @@ echo -e "banner header body\nbanner\nbanner header\nbanner body" | grep -E -v "h
 banner
 ```
 
+* 查看磁盘空间使用情况
+```bash
+df -h
+```
+
 
 # 常见问题
