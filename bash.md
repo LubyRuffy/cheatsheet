@@ -426,6 +426,11 @@ eval echo '~/.cache'
 find ./ -type f | awk -F/ '{print$(NF-1), NF-1}' | sort | uniq -c | sort -nr -k 1 | awk '{print $1,$2}'
 ```
 
+* ollama更新所有模型
+```shell
+ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} sh -c "echo ===== {} =====; ollama pull {}"
+```
+
 # 常见问题
 
 * -e -f -d的区别是什么？
