@@ -431,6 +431,12 @@ find ./ -type f | awk -F/ '{print$(NF-1), NF-1}' | sort | uniq -c | sort -nr -k 
 ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} sh -c "echo ===== {} =====; ollama pull {}"
 ```
 
+* ollama根据大小倒叙排列模型
+```shell
+ollama list | tail -n +2 | sort -r -n -k3
+```
+
+
 # 常见问题
 
 * -e -f -d的区别是什么？
