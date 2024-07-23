@@ -379,6 +379,19 @@ cat coverage.json | jq '.Packages[] | .Name as $pkg | .Functions[] | select(.Sta
 # 排除@开头
 cat coverage.json | jq '.Packages[] | .Name as $pkg | .Functions[] | select(.Name | startswith("@") | not) | select(.Statements | all(.Reached == 0)) | {package: $pkg, function: .Name} '
 
+# 函数调用百分比统计
+cat coverage.json | jq '
+  [.Packages[].Functions[] | select(.Name | startswith("@") | not)] |
+  {
+    total_functions: length,
+    called_functions: map(select(.Statements | any(.Reached > 0))) | length,
+    uncalled_functions: map(select(.Statements | all(.Reached == 0))) | length
+  } |
+  . + {
+    coverage_percentage: (.called_functions / .total_functions * 100 | round | tostring + "%")
+  }
+'
+
 ```
   
 # 常见问题
