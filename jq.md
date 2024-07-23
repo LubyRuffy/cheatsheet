@@ -372,6 +372,13 @@ echo '{
 可以这么写：
 ```shell
 cat coverage.json | jq '[.Packages[].Functions[] | select(.Statements | all(.Reached == 0)) | .Name] | unique'
+
+# 打印pkg
+cat coverage.json | jq '.Packages[] | .Name as $pkg | .Functions[] | select(.Statements | all(.Reached == 0)) | {package: $pkg, function: .Name} '
+
+# 排除@开头
+cat coverage.json | jq '.Packages[] | .Name as $pkg | .Functions[] | select(.Name | startswith("@") | not) | select(.Statements | all(.Reached == 0)) | {package: $pkg, function: .Name} '
+
 ```
   
 # 常见问题
