@@ -366,7 +366,13 @@ echo '{
   }
 }' | jq '.aggregations.query_strings.buckets | sort_by(.user_id_count.value)'
 ```
-  
+
+## 如何提取一个object数组下某个字段都为某个值的项
+场景如下：go test生成的out文件，用gocov生成了json格式。想要用jq找出没有调用的函数列表（找到Statements下所有Reached计数都为0的语句对应的函数名称）。
+可以这么写：
+```shell
+cat coverage.json | jq '[.Packages[].Functions[] | select(.Statements | all(.Reached == 0)) | .Name] | unique'
+```
   
 # 常见问题
   
