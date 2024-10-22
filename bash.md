@@ -329,17 +329,17 @@ python hello.py < foo.txt # 读取内容
 
 # 任务场景
 
-* 生成随机数：
-  ```bash
-  echo $((RANDOM%=200))
-  ```
+## 生成随机数：
+```bash
+echo $((RANDOM%=200))
+```
 
-* 生成随机IP：
-  ```bash
-  echo $((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256))
-  ```
+## 生成随机IP：
+```bash
+echo $((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256)).$((RANDOM%256))
+```
 
-* 根据文件路径列表，返回第一个存在的文件
+## 根据文件路径列表，返回第一个存在的文件
 ```bash
 filearray=("./myfile" "./dir1/myfile" "./dir2/myfile")
 for mfile in "${filearray[@]}"; do
@@ -351,19 +351,19 @@ for mfile in "${filearray[@]}"; do
 done
 ```
 
-* 根据时间生成文件名
+## 根据时间生成文件名
 ```bash
 file=myfile_$(date +"%Y%m%d%H%M%S")
 # => myfile_20190117121316
 ```
 
-* 通过读取管道的列表通过进程池执行的方式实现并发
+## 通过读取管道的列表通过进程池执行的方式实现并发
 --max-procs 参数 或着-P参数可以指定并发数
 ```bash
 fofacli 'domain=baidu.com' | xargs -n 1 --max-procs=3 -I{} bash -c "echo {} && wget {}"
 ```
 
-* 判断字符串包含
+## 判断字符串包含
 ```bash
 A="helloworld"
 B="low"
@@ -375,7 +375,7 @@ else
 fi
 ```
 
-* 取文件名
+## 取文件名
 ```
 echo $(basename "/a/b.txt")
 b.txt
@@ -386,7 +386,7 @@ a="/a/b.txt"; echo ${a##*/}
 b.txt
 ```
 
-* 分隔符取左右的数据
+## 分隔符取左右的数据
 ```
 a=abc-123
 echo ${a%-*}
@@ -395,7 +395,7 @@ echo ${a##*-}
 123
 ```
 
-* 最简单的条件判断打印行
+## 最简单的条件判断打印行
 ```
 [[ "1" == "1" ]] && echo "yes" || echo "no"
 yes
@@ -403,19 +403,19 @@ yes
 no
 ```
 
-* 正则表达式匹配数字
+## 正则表达式匹配数字
 不能直接用\d的方式，可以用```[[:digit:]]```或者```[0-9]```
 ```
 [[ "v0.0.10" =~ ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$ ]] && echo "yes" || echo "no"
 yes
 ```
 
-* 遍历文件名
+## 遍历文件名
 ```
 for filename in ./*; do echo $filename; done
 ```
 
-* 扩展~符号
+## 扩展~符号
 有时候我们获取的字符串带有tilde波浪线需要扩展成完整的路径，可以用eval的方式：
 ```
 eval echo '~/.cache'
@@ -435,6 +435,9 @@ ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} sh -c "echo ===== {} =
 ```shell
 ollama list | tail -n +2 | sort -r -n -k3
 ```
+
+
+## 通过命令行写文件
 
 
 # 常见问题
