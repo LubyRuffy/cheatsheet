@@ -438,6 +438,24 @@ ollama list | tail -n +2 | sort -r -n -k3
 
 
 ## 通过命令行写文件
+尤其是在docker alpine/slim 镜像里面没有vi的情况下很有用：
+```shell
+cat <<EOF > /etc/apt/sources.list
+> # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+deb https://security.debian.org/debian-security bullseye-security main contrib non-free
+# deb-src https://security.debian.org/debian-security bullseye-security main contrib non-free
+> EOF
+```
 
 
 # 常见问题
