@@ -119,6 +119,11 @@ git merge branch1
 git push
 ```
 
+* 冲突情况下取消合并
+```shell
+git merge --abort
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
