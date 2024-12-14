@@ -435,6 +435,10 @@ ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} sh -c "echo ===== {} =
 ```shell
 ollama list | tail -n +2 | sort -r -n -k3
 ```
+统一成MB模式更准确
+```
+ollama list|awk 'NR>1 {size_mb = ($4 == "GB") ? $3*1024 : $3; print size_mb, $1}' | sort -nr
+```
 
 
 ## 通过命令行写文件
