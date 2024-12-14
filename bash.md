@@ -439,6 +439,10 @@ ollama list | tail -n +2 | sort -r -n -k3
 ```
 ollama list|awk 'NR>1 {size_mb = ($4 == "GB") ? $3*1024 : $3; print size_mb, $1}' | sort -nr
 ```
+同样的也可以删除huggingface下载的缓存：
+```shell
+huggingface-cli scan-cache | grep -v ".0 " | grep -v "K " | awk 'NR>1 {size_mb = (substr($3, length($3), 1) == "G") ? $3*1024: substr($3,1,length($3)-1); print size_mb, $1}' | sort -nr
+```
 
 
 ## 通过命令行写文件
