@@ -393,6 +393,18 @@ cat coverage.json | jq '
 '
 
 ```
+
+## 如何支持类似于ollama的stream模式，实时输出
+```shell
+jq --arg prompt "$(cat ~/Downloads/a.html)" '.prompt=$prompt' <<< '{
+  "model": "reader-lm:0.5b",
+  "options": {
+    "temperature": 0,
+    "num_ctx": 131072
+  }
+}' | curl -s -N http://localhost:11434/api/generate -d @- | jq -r --unbuffered --raw-output0 '.response'
+```
+关键参数是：`--raw-output0`，默认macos用brew安装的1.7.1版本都不支持，很奇怪，理论上2023年7月后就有的，最新版本是2023年11月份的代码，但是不支持，只能自己源代码编译了。
   
 # 常见问题
   
