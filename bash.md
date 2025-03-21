@@ -465,6 +465,13 @@ deb https://security.debian.org/debian-security bullseye-security main contrib n
 > EOF
 ```
 
+## 如何从ollama日志中提取字符串还原
+ollama的日志是双引号开头json括起来的部分，直接echo会报错。解决办法：echo 前后假如单引号，用-E参数，结合jq -r。
+就能既解决字符串正常显示的问题，也能解决``命令支付符号带来的报错
+```shell
+echo -E  '"a\n```golang\n\t123\n```\nb"' | jq -r
+```
+
 
 # 常见问题
 
