@@ -88,5 +88,11 @@ curl http://127.0.0.1:11245/../../../abc -vv  --path-as-is
 Exact match for /../../../abc%
 ```
 
+## 使用https代理时不检查证书
+--proxy-insecure                     Skip HTTPS proxy cert verification
+```shell
+curl -x https://127.0.0.1:18443  --proxy-insecure
+```
+
 
 # 常见问题
