@@ -443,7 +443,12 @@ ollama list|awk 'NR>1 {size_mb = ($4 == "GB") ? $3*1024 : $3; print size_mb, $1}
 ```shell
 huggingface-cli scan-cache | grep -v ".0 " | grep -v "K " | awk 'NR>1 {size_mb = (substr($3, length($3), 1) == "G") ? $3*1024: substr($3,1,length($3)-1); print size_mb, $1}' | sort -nr
 ```
-
+简化版本：
+```shell
+huggingface-cli scan-cache | tail -n +3 | sort -k 3 -h -r
+```
+参数h可以自动识别，不用那么麻烦：
+`-h: Human-numeric-sort，智能处理带单位的数字（如 807.7M, 16.6G），这是解决此问题的关键。`
 
 ## 通过命令行写文件
 尤其是在docker alpine/slim 镜像里面没有vi的情况下很有用：
