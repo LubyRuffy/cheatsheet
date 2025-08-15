@@ -405,6 +405,13 @@ jq --arg prompt "$(cat ~/Downloads/a.html)" '.prompt=$prompt' <<< '{
 }' | curl -s -N http://localhost:11434/api/generate -d @- | jq -r --unbuffered --raw-output0 '.response'
 ```
 关键参数是：`--raw-output0`，默认macos用brew安装的1.7.1版本都不支持，很奇怪，理论上2023年7月后就有的，最新版本是2023年11月份的代码，但是不支持，只能自己源代码编译了。
+
+## 如何把jsonl文件进行内容的精简再输出
+比如我们希望告诉大模型我们的字段，同时给出样例，但是我们又不希望太长了，就可以针对string字段进行截断。
+如下命令行确保每个字符串的字段最多只显示前30个字符：
+```shell
+cat samples.jsonl | jq -c 'walk(if type == "string" and length > 30 then .[0:30] + "..." else . end)'
+```
   
 # 常见问题
   
