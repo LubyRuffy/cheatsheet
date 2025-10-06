@@ -124,6 +124,24 @@ git push
 git merge --abort
 ```
 
+* 如何列出仓库里面的超大文件
+有时候不小心提交了很多二进制文件，导致pull很慢，需要列出来并且从仓库中删除
+```shell
+git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}')"
+
+# top 10 的文件会被列出来
+91cef7829d4e7f9db95858c9eaed419fecfd374d rawgrab11
+431df760285244c658ef3bfbef9f106b14ae50f1 rawgrab.exe
+f38200586392bc019917f9069995df76b55b7143 rawgrab0516
+0385244e5fb05bbb6c657fc8f149e15f9cda254b cmd/cli/cli
+9141c4bc20bab72e5c1f48530e73f130b390a901 rawgrab
+2595bd3f7c5b5b6fe4cd43c3ef622dd657ca8eb8 rawgrab
+b13145c32fbfc695182b4c970f556eaa1d17342e rawgrab
+0f870eeaf25458a24b793527a333b595b2bf7587 rawgrab.exe
+8f0fc17bb7f49034476af0c84bee1e42d9783860 grab
+3599d57534e2bdba0de9697933abc5055a6c17b1 cmd/grab.exe
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
