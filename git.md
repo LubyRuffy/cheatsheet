@@ -142,6 +142,22 @@ b13145c32fbfc695182b4c970f556eaa1d17342e rawgrab
 3599d57534e2bdba0de9697933abc5055a6c17b1 cmd/grab.exe
 ```
 
+* 如何查看一个大文件是谁在哪个版本导入进来的？
+```shell
+git log --diff-filter=A -- rawgrab.exe
+```
+
+* 如何删除一个历史版本中的文件？
+```shell
+git filter-repo --path rawgrab.exe --invert-paths
+```
+如果报错（Aborting: Refusing to destructively overwrite repo history since this does not look like a fresh clone.），可以先对齐版本再操作：
+```shell
+git reflog expire --expire=now --all
+git gc --prune=now
+git filter-repo --path rawgrab.exe --invert-paths
+```
+
 # 常见问题
 * clone与fetch的区别在哪？
 
