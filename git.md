@@ -150,12 +150,16 @@ git log --diff-filter=A -- rawgrab.exe
 * 如何删除一个历史版本中的文件？
 ```shell
 git filter-repo --path rawgrab.exe --invert-paths
+git push origin --force --all
+git push origin --force --tags
 ```
 如果报错（Aborting: Refusing to destructively overwrite repo history since this does not look like a fresh clone.），可以先对齐版本再操作：
 ```shell
 git reflog expire --expire=now --all
 git gc --prune=now
 git filter-repo --path rawgrab.exe --invert-paths
+git push origin --force --all
+git push origin --force --tags
 ```
 
 # 常见问题
